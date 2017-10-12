@@ -1,0 +1,15 @@
+
+class ValuePairArray :public CCObject
+{
+
+	ValuePairArray();
+	~ValuePairArray();
+	static ValuePairArray* create();
+	void addIntPair( const char*  key, int value);
+	void addLongPair(const char* key, long value);
+	void addStringPair(const char* key, const char* value);
+	void addDoublePair(const char* key, double value);
+
+	const char* toString();
+
+};

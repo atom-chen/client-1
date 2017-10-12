@@ -1,0 +1,38 @@
+//////////////////////////////////////////////////////////////////////////
+//动作帧事件
+class SFSpriteAnimNotifyEvent
+{
+	SFSpriteAnimNotifyEvent();
+	int getCurAction();
+	const char* getNotify();
+
+};
+
+
+//////////////////////////////////////////////////////////////////////////
+//点击事件
+class SFTouchEvent
+{
+	SFTouchEvent();
+
+	int getMapX();
+	int getMapY();
+	int getMapCellX();
+	int getMapCellY();
+	int getScreenX();
+	int getScreenY();
+};
+
+
+//////////////////////////////////////////////////////////////////////////
+//移动移动事件
+class SFSpriteMovementEvent
+{
+	SFSpriteMovementEvent();
+	SFSpriteMovementEvent(int x, int y);
+	int getMapX();
+	int getMapY();
+
+	bool isBeginGo();
+	bool isBeginStop();
+};

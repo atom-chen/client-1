@@ -1,0 +1,15 @@
+
+
+class SFTouchDelegate
+{
+	SFTouchDelegate( CCNode* pOwner ); 
+	virtual ~SFTouchDelegate();
+};
+
+class RTLayer : public CCLayer, public SFTouchDelegate
+{
+	RTLayer();
+
+	static RTLayer* create();
+	virtual bool init();
+};

@@ -1,0 +1,13 @@
+
+class SFGraySprite : public CCSprite
+{
+
+
+	bool initWithTexture(CCTexture2D* texture, const CCRect&  rect);
+	void draw();
+	void initProgram();
+	void listenBackToForeground(CCObject *obj);
+
+	static SFGraySprite* create(const char *pszFileName);
+
+};

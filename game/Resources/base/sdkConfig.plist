@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>QD_Key</key>
+	<string>9133</string>
+	<key>QD_Name</key>
+	<string>9133</string>
+	<key>QD_Code1</key>
+	<string>1</string>
+	<key>QD_Code2</key>
+	<string>1</string>
+	<key>QD_Property1</key>
+	<string>530c7b1de1382310d54a8657</string>
+	<key>QD_Property2</key>
+	<string>832cd20ddb7e4deca616279750e00525</string>
+	<key>Game_Key</key>
+	<string>lieyanzhetian</string>
+	<key>Platform</key>
+	<string>win32</string>
+	<key>Suffix</key>
+	<string>exe</string>
+	<key>testerLoginSettingUrl</key>
+	<string>http://10.19.54.56/lieyanzhetian/servers/develop.json</string>
+	<key>Service_Url</key>
+	<string>http://10.19.54.56/lieyanzhetian/services.php</string>
+	<key>LoginSettingUrl</key>
+	<string>http://10.19.54.56/lieyanzhetian/servers/develop.json</string>
+	<key>BackupLoginSettingUrl</key>
+	<string>http://10.19.54.56/lieyanzhetian/servers/develop.json</string>
+	<key>TrackPayOrderUrl</key>
+	<string>http://10.19.54.56/lieyanzhetian/trackPayOrder.php</string>
+	<key>AuthUrl</key>
+	<string>http://10.19.54.56/lieyanzhetian/auth.php</string>
+</dict>
+</plist>

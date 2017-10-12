@@ -1,0 +1,46 @@
+
+
+enum TabViewMode{
+	tab_horizontal,
+	tab_vertical
+};
+
+class SFTabView;
+
+class SFTabViewDelegate{
+
+	virtual void didSelControl(SFTabView *tabView, int index)=0;
+};
+
+
+class SFTabView: public SFBaseControl{
+
+	virtual ~SFTabView();
+
+
+	static SFTabView* create(CCArray *controls, int margin, TabViewMode mode = tab_horizontal);
+	bool init(CCArray* controls, int margin, TabViewMode mode = tab_horizontal);
+
+	void initControlTaget();	
+	const CCSize & getSize();
+
+
+	virtual bool insertControl(CCControlButton *ctlButton);
+	virtual bool removeControl(CCControlButton *ctlButton);
+
+	virtual CCControlButton* getSelControl();
+	virtual bool setSelControl(CCControlButton *ctlButton);
+
+	virtual int getSelIndex();
+	virtual bool setSelIndex(unsigned int index);
+
+
+	
+	virtual void setTabMode(TabViewMode tabMode);
+	virtual void setDelegate(SFTabViewDelegate *delegate);
+	virtual void setAllUnSel();
+	virtual void setDefaultSel(bool defaultSel);
+
+};
+
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>zhetian-base-release.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>zhetian-base.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>zhetian.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>090998291946AED900CABC49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09099B9B1946AF1600CABC49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09099CEC1946AF7000CABC49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>090B24F8198891C200364938</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>097BD06D1946AC3E0068F82A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>097BD1BF1946ADCB0068F82A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09BA26FC19711C21008E562B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09FEA03A1887B6350036C554</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

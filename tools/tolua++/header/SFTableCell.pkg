@@ -1,0 +1,14 @@
+
+class SFTableViewCell :public CCTableViewCell{
+
+
+	void setIdentify(const char* strIdentify);
+	std::string getIdentify();
+	static SFTableViewCell* create();
+
+ virtual int getIndex(void) const ;
+ virtual void setIndex(int var);
+
+};
+
+

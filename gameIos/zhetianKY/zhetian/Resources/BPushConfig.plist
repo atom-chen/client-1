@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DEBUG</key>
+	<true/>
+	<key>BPUSH_CHANNEL</key>
+	<string>ky</string>
+	<key>API_KEY</key>
+	<string>b26t5QcVovgdgjehRcxUS8By</string>
+	<key>PRODUCTION_MODE</key>
+	<false/>
+</dict>
+</plist>

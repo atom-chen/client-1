@@ -1,0 +1,14 @@
+
+class SFControlFactory
+{
+public:
+	SFControlFactory(const char *type);
+
+	virtual CCNode* CreateControl() = 0;
+
+	virtual void DestroyControl(CCNode *control);
+
+	const char * GetTypeName() const;
+
+};
+

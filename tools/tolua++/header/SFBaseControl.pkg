@@ -1,0 +1,52 @@
+
+enum
+{
+	SFControlEventTouchEnd				= 1 << 0,
+	SFControlEventDoubleClick		= 1 << 1,
+	SFControlEventLongClick			= 1 << 2,
+	SFControlEventScrollViewScroll	= 1 << 3,
+	SFControlEventScrollViewZoom	= 1 << 4,
+	SFControlEventTouchMove          =  1<< 5,
+	SFControlEventTouchBegin          =  1 << 6,
+};
+
+typedef unsigned int SFControlEvent;
+
+
+class SFBaseControl: public CCLayer
+{
+
+	SFBaseControl();
+	virtual ~SFBaseControl();
+
+
+	virtual unsigned char getOpacity(void);
+	virtual void setOpacity(unsigned char var);
+
+	virtual const ccColor3B& getColor(void);
+	virtual void setColor(const ccColor3B& var);
+
+	bool isOpacityModifyRGB();
+	void setOpacityModifyRGB(bool bOpacityModifyRGB);
+
+	virtual bool init();
+	
+	void setControlName(const char* name);
+	const char* getControlName();
+
+	void setImageKey(const char* imageKey);
+	const char* getImageKey();
+
+	void setTitleKey(const char* titleKey);
+	const char* getTitleKey();
+
+	void addTargetWithActionForControlEvents(CCObject* target, SEL_CCControlHandler action, SFControlEvent controlEvents);
+	void addTargetWithActionForControlEvents(LUA_FUNCTION nHandler, SFControlEvent controlEvents);
+
+	virtual void sendActionsForControlEvents(SFControlEvent controlEvents);
+	
+	void setTouchAreaDelta(float deltaLeft, float deltaRight, float deltaTop, float deltaButtom);
+	void setTouchAreaScale(float scale);
+};
+
+

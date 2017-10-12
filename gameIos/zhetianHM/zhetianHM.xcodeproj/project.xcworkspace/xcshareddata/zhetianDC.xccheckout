@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9AA21A40-D2F0-40B8-9A54-991DB1B8537D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>zhetianDC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>04A880B1-678A-4E68-9977-705BE9492ECE</key>
+		<string>svn://10.21.210.164/MorningGlory/client/trunk</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>gameIos/zhetianDC/zhetianDC.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>04A880B1-678A-4E68-9977-705BE9492ECE</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>04A880B1-678A-4E68-9977-705BE9492ECE</key>
+		<string>svn://10.21.210.164/MorningGlory</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://10.21.210.164/MorningGlory/client/trunk/gameIos/zhetianDC/zhetianDC.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>04A880B1-678A-4E68-9977-705BE9492ECE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>client/trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>04A880B1-678A-4E68-9977-705BE9492ECE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>client (trunk)</string>
+		</dict>
+	</array>
+</dict>
+</plist>

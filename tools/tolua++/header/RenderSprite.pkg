@@ -1,0 +1,54 @@
+
+	typedef unsigned int	 uint32;
+typedef unsigned char GLubyte;
+	class RenderSprite : public CCNodeRGBA
+	{
+
+			void	reset();
+		
+
+			RenderSprite();
+			virtual ~RenderSprite();
+
+			bool load(unsigned int modelId, unsigned int defaultId = 0);
+			void onLeaveMap();
+			int	 getModelId();
+
+
+			void clear();
+			void setAngle(int dir);
+			int getAngle();
+			void setRenderOffset(CCPoint offset);
+			void setAlpha(unsigned char alpha);
+
+			void changeModel(int modelId);
+			void changeModelWithDefault(int modelId, int defaultId,bool gender);
+			bool changeActionCallback(int actionId, float speed, bool loop, LUA_FUNCTION nScriptHandler);
+			bool changeAction(int actionId, float speed, bool loop);
+			void setAnimSpeed(float speed);
+			void setEnableOpacity(bool enable);
+			void changePartWithDefault(int partType, int showId, bool gender,unsigned int defaultId = 0,short offsetX = 0, short offsetY = 0);
+			void setPartScale(int partType, float scale);
+			float getPartScale(int partType);
+			void setVisiblePart(int partType, bool visible);
+
+			void setAnimNotifyScriptHandler(LUA_FUNCTION nScriptHandler);
+
+
+			CCRect getBoundRect();
+			CCNode* getHeadNode();
+
+			float getCenterPositionY();
+			unsigned char getAlpha();
+
+
+			virtual void visit();
+
+			int getZOrder();
+			CCSize& getContentSize();
+			
+			void setRenderSpriteVisible(bool visible);
+			bool getRenderSpriteVisible();
+			int getActionId();
+	};
+

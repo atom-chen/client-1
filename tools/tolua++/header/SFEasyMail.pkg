@@ -1,0 +1,20 @@
+
+class SFEasyMail
+{
+	SFEasyMail( 
+		const std::string & strUser,
+		const std::string & strPsw,		
+		const std::string & strSmtpServer, 
+		const std::string & strMailFrom	
+		);  
+	virtual ~SFEasyMail();
+	
+	void	SetMailContent(const std::string & strSubject, const std::string & strContent);
+	bool	SendMail();
+	void	AddRecipient(const std::string & strMailTo);
+
+
+	bool	SendEasyMail(const std::string & strUser, const std::string & strPsw,const std::string & strSmtpServer,const std::string & strMailFrom,
+		const std::string & strMailTo,const std::string & strSubject, const std::string & strContent);
+};
+

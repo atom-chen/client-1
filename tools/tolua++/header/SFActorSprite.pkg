@@ -1,0 +1,41 @@
+
+class SFActorSprite 
+{
+
+
+	SFActorSprite();
+	virtual ~SFActorSprite();
+	void release();
+
+	void update(float delay);
+
+
+	virtual void setVisible(bool visible);
+	bool isVisible();
+
+
+
+	void init(int modelId);
+
+	void setAngle(int angle);
+	int getAngle();
+
+	void setMoveSpeed(int speed);
+	bool changeAction(int id, float speed, bool loop);
+
+	RenderSprite* getSprite();
+
+	void changeCloth(int showId);
+	void setClothVisible(bool viisble);
+
+	void changeWeapon(int showId);
+	void setWeaponVisible(bool visible);
+	bool isWeaponVisible(void);
+
+
+	void rideOn(int modelId);
+	void rideDown();
+	bool changeRideAction(int id, float speed, bool loop);
+
+
+};

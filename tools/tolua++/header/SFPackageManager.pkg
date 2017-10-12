@@ -1,0 +1,60 @@
+class SFPackgePatchDelegate :public CCObject
+{
+public:
+	virtual void onPatchProgress(int current, int total);
+	virtual void onPatchError(int errorCode);
+	virtual void onSuccess();
+};
+
+enum PatchEvent
+{
+	eOnPatchProgress,
+	eOnError,
+	eOnSuccess,
+};
+
+class SFPackgePatchLuaDelegate: public SFPackgePatchDelegate
+{
+public:
+	SFPackgePatchLuaDelegate();
+	virtual ~SFPackgePatchLuaDelegate();
+	virtual void onPatchProgress(int current, int total);
+	virtual void onPatchError(int errorCode);
+	virtual void onSuccess();
+	virtual void setLuaHandler(LUA_FUNCTION nHandler);
+};
+
+struct SFPackageVersion
+{
+	int mainVersion;
+	int subVersion;
+	char format;
+};
+
+class SFPackageManager : public CCFileLoader
+{
+public:
+	virtual ~SFPackageManager();
+	static SFPackageManager* Instance();
+	void setResourcePath(const char* path);
+
+	SFPackageVersion addPackageName(const char* name);
+
+	void releaseLoadPackage();
+
+	void setPackageDelegateProtocl(SFPackgePatchDelegate* delegate);
+
+	void mergePackage(const char* patchPackage);
+
+	void startMerge();
+	void completePackage();
+
+	virtual bool canLoad();
+
+	virtual bool isFileExist(std::string& filePath);
+	virtual long getFileLength(const char* filePath);
+
+	virtual unsigned char* getFileData(const char* filePath, long* length);
+	std::string getFileStringContent(const char* filePath);
+};
+

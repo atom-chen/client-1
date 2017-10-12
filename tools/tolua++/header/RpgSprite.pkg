@@ -1,0 +1,11 @@
+
+	class RpgSprite : public RenderSprite
+	{
+		RpgSprite();
+		~RpgSprite();
+
+		static RpgSprite* create();
+
+		virtual void onEnter();
+
+	};

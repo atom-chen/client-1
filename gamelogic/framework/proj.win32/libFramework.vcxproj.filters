@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{25842e26-516e-48fa-b748-ba13d23f8696}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\core">
+      <UniqueIdentifier>{9f53d321-22af-4a83-8a96-286f693fcc73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\download">
+      <UniqueIdentifier>{47fd03be-33d6-4bff-83f4-a8b92258d643}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\eventset">
+      <UniqueIdentifier>{cd30d08e-423c-4553-8b77-f7860fef2dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\map">
+      <UniqueIdentifier>{7fb751a8-cc44-4c96-80dd-269ef0970a58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\net">
+      <UniqueIdentifier>{c756c6cd-e574-46a6-892b-1f9d914c8140}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\stream">
+      <UniqueIdentifier>{43479089-2758-4c96-833e-528861f42dc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\utils">
+      <UniqueIdentifier>{f6f5d50f-2509-4b3b-9d9d-6555515900b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\base">
+      <UniqueIdentifier>{b6a1fb16-f12e-4187-a1f5-2e62c85b5ecc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\package">
+      <UniqueIdentifier>{f3baf3fd-c69d-41bd-bfd0-eb5ed0eb9638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\resource">
+      <UniqueIdentifier>{c0049815-1610-40f8-92e4-c6dbb3018b3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\scene">
+      <UniqueIdentifier>{b9574c79-4f1e-41dd-a17b-2e806ebea645}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\utils\jason">
+      <UniqueIdentifier>{e59b7b9c-1ce2-47eb-846e-c7209470949d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\sofia.h" />
+    <ClInclude Include="..\include\core\Camera.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\ModelMap.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\RenderScene.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\RenderSceneLayer.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\RenderSceneNode.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\RenderSprite.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\RenderSubSprite.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\RpgSprite.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\download\CURLEasyUtils.h">
+      <Filter>include\download</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\download\mfDownloader.h">
+      <Filter>include\download</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\eventset\Event.h">
+      <Filter>include\eventset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\eventset\EventArgs.h">
+      <Filter>include\eventset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\eventset\EventSet.h">
+      <Filter>include\eventset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\eventset\SubscriberSlot.h">
+      <Filter>include\eventset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\Adornment.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\Background.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\CellGroup.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\ElemGroup.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\Layer.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\LogicBlock.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\LogicFinder.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\LogicPath.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\Map.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\MapDefine.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\MapLoadingInterface.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\Mask.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\MetaLayer.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\MiddleRenderLayer.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\RenderCocos.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\RenderCommon.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\RenderInterface.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\SpriteMove.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\StructCommon.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\net\NetSystem.h">
+      <Filter>include\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\net\Network.h">
+      <Filter>include\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\stream\BinaryReader.h">
+      <Filter>include\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\stream\BinaryReaderNet.h">
+      <Filter>include\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\stream\BinaryWriter.h">
+      <Filter>include\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\stream\BinaryWriterNet.h">
+      <Filter>include\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\stream\iStream.h">
+      <Filter>include\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\stream\MemoryStream.h">
+      <Filter>include\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\MemoryImageLoadSave.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\Profiler.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFExecutionThreadService.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFThread.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\Singleton.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\sqlite3.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\base\SFApp.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\ActionEventBase.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\GameEventBase.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\SymbolDefines.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\utils.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\package\SFPackage.h">
+      <Filter>include\package</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\resource\EntityData.h">
+      <Filter>include\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\resource\GameResource.h">
+      <Filter>include\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\resource\ResourceCfg.h">
+      <Filter>include\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\scene\SFGamePresenter.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\scene\SFGameScene.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\scene\SFGameSceneMgr.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\net\SFSocketCommService.h">
+      <Filter>include\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\ExternStack.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\MapBackgroundLoading.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\MapResouceManager.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\SceneBase.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\SFMap.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\SFMapDef.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\SFMapService.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\SFSpriteEvent.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\StreamDataAdapter.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\CsvFile.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\json\autolink.h">
+      <Filter>include\utils\jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\json\features.h">
+      <Filter>include\utils\jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\json\json.h">
+      <Filter>include\utils\jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\json\reader.h">
+      <Filter>include\utils\jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\json\value.h">
+      <Filter>include\utils\jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\json\writer.h">
+      <Filter>include\utils\jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\json\config.h">
+      <Filter>include\utils\jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\json\forwards.h">
+      <Filter>include\utils\jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\json\json_batchallocator.h">
+      <Filter>include\utils\jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\json\json_tool.h">
+      <Filter>include\utils\jason</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFTouchDispatcher.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SFSimulator.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFPriorityNotificationCenter.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFTimeAxis.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\HttpTools.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\CCStrConv.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\CCStrUtil.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFMiniHtml.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFStringUtil.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\SFRenderSprite.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\heap.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\package\SFPackageManager.h">
+      <Filter>include\package</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\download\SFDownload.h">
+      <Filter>include\download</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\package\SFPackageUpdateMgr.h">
+      <Filter>include\package</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFEasyMail.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

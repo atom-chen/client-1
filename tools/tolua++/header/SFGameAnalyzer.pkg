@@ -1,0 +1,6 @@
+class SFGameAnalyzer
+{
+	SFGameAnalyzer();
+	~SFGameAnalyzer();
+	static void logGameEvent(int eventId, std::string eventData);
+};

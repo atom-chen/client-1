@@ -1,0 +1,44 @@
+enum
+{
+	TagGameLayer,
+	TagUILayer,
+	TagDialogLayer
+};
+
+enum 
+{
+	SceneEventEnter = 1,
+	SceneEventExit
+};
+
+class SFGameScene : public RTLayer
+{
+	SFGameScene(void);
+	virtual ~SFGameScene(void);
+    
+    bool initWithContext(std::string context);
+    static SFGameScene* gameSceneWithContext(std::string context);
+
+	virtual void onEnter();
+	virtual void onExit();
+    
+    std::string getContext();
+    
+	CCNode* getGameLayerByTag(int tagOfGameLayer);
+	void addGameLayer(CCNode *gameLayer);
+	void removeGameLayer(int tagOfGameLayer, bool clearUp=true);
+	void removeGameLayer(CCNode *gameLayer, bool clearUp=true);
+
+	CCNode* getUILayerByTag(int tagOfUILayer);
+	void addUILayer(CCNode *uiLayer);
+	void removeUILayer(int tagOfUILayer, bool clearUp=true);
+	void removeUILayer(CCNode *uiLayer, bool clearUp=true);
+
+	CCNode* getDialogLayerByTag(int tagOfDialogLayer);
+	void addDialogLayer(CCNode *dialogLayer);
+	void removeDialogLayer(int tagOfDialogLayer, bool clearUp=true);
+	void removeDialogLayer(CCNode *dialogLyer, bool clearUp=true);
+
+	void addSceneEventHandler(int event, LUA_FUNCTION nHandler);
+};
+

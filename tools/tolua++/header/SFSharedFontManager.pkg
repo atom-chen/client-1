@@ -1,0 +1,6 @@
+
+class SFSharedFontManager
+{
+	static SFSharedFontManager* sharedSFSharedFontManager();
+	CCArray* getSpriteList(std::string font, int size,const char* str);
+}

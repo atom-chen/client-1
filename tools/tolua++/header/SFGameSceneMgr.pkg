@@ -1,0 +1,14 @@
+
+class SFGameSceneMgr : public CCObject
+{
+    SFGameSceneMgr();
+    virtual ~SFGameSceneMgr();
+    
+    bool init();
+    static SFGameSceneMgr* gameSceneMgr();
+    
+    void addGameScene(SFGameScene *gameScene);
+    void removeGameSceneWithContext(std::string gameSceneContext);
+    SFGameScene* getGameScene(std::string context);
+    
+};

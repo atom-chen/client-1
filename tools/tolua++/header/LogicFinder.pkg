@@ -1,0 +1,40 @@
+
+	enum ASTART_DIR
+	{
+		DIR_S = 0,
+		Dir_U,
+		Dir_RU,
+		Dir_R,
+		Dir_RD,
+		Dir_D,
+		Dir_LD,
+		Dir_L,
+		Dir_LU,
+		Dir_RESERVED,
+		Dir_Count
+	};
+	class pathPoint : public CCObject
+	{
+	public:
+		pathPoint();
+		virtual ~pathPoint();
+		static pathPoint* create(int x, int y);
+		virtual CCObject* copy();
+		int getX();
+		int getY();
+	};
+
+	class LogicFinder
+	{
+		LogicFinder();
+		virtual ~LogicFinder();
+
+		virtual bool ReLoad( const LogicBlock& block);
+
+		bool findPath(const IntPoint& begin, const IntPoint& end);
+
+		virtual bool GetPoint(IntPoint* out);
+		CCArray* getPathPoints();
+	};
+
+

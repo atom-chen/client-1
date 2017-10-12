@@ -1,0 +1,44 @@
+class SFControlSlider : CCControl
+{
+		virtual float getValue() const;
+    virtual void setValue(float val);
+    virtual float getMinimumValue() const;
+    virtual void setMinimumValue(float val);
+    virtual float getMaximumValue() const;
+    virtual void setMaximumValue(float val);
+    virtual void setEnabled(bool enabled);
+    virtual bool isTouchInside(CCTouch * touch);
+    CCPoint locationFromTouch(CCTouch* touch);
+    
+    virtual float getMinimumAllowedValue() const;
+    virtual void  setMinimumAllowedValue(float val);
+
+    virtual float getMaximumAllowedValue() const;
+    virtual void  setMaximumAllowedValue(float val); 
+
+    virtual CCSprite*  getThumbSprite() const;
+    virtual void  setThumbSprite(CCSprite* val);
+
+    virtual CCScale9Sprite*  getProgressSprite() const;
+    virtual void  setProgressSprite(CCScale9Sprite* val);
+
+    virtual CCScale9Sprite*  getBackgroundSprite() const;
+    virtual void  setBackgroundSprite(CCScale9Sprite* val);
+    
+    virtual SFProgressBar*  getProgressBar() const;
+    virtual void  setProgressBar(SFProgressBar* val);
+    
+    virtual CCScale9Sprite*  getShadeSprite() const;
+    virtual void  setShadeSprite(CCScale9Sprite* val);
+
+    SFControlSlider();
+    virtual ~SFControlSlider();
+
+    virtual bool initWithSprites(CCScale9Sprite * backgroundSprite, CCScale9Sprite* progressSprite, CCSprite* thumbSprite,CCSize sizeBar);
+
+    static SFControlSlider* create(const char* bgFile, const char* progressFile, const char* thumbFile,CCSize sizeBar);
+    static SFControlSlider* create(CCScale9Sprite * backgroundSprite, CCScale9Sprite* progressSprite, CCSprite* thumbSprite,CCSize sizeBar);
+
+    virtual void needsLayout();
+		void setShade(CCScale9Sprite* shadeSprite);
+};

@@ -1,0 +1,21 @@
+class CCShaderColorFadeIn : public CCActionInterval
+{
+	static CCShaderColorFadeIn* create(float time, const ccColor3B& color);
+
+	bool initWithDuration(float time, const ccColor3B& color);
+	virtual void startWithTarget(CCNode *pTarget);
+
+	virtual void stop(void);
+	virtual void update(float time);
+};
+
+class CCShaderColorFadeOut : public CCActionInterval
+{
+	static CCShaderColorFadeOut* create(float time, const ccColor3B& color);
+
+	bool initWithDuration(float time, const ccColor3B& color);
+	virtual void startWithTarget(CCNode *pTarget);
+
+	virtual void stop(void);
+	virtual void update(float time);
+};

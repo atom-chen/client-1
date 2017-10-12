@@ -1,0 +1,333 @@
+#include "resource/SFLoadResourceModule.h"
+#include "map/RenderCommon.h"
+#include "map/SFMapService.h"
+#include "map/SFMapRenderDelegate.h"
+USING_NS_CC;
+
+SFLoadTextureModule::SFLoadTextureModule()
+{
+	m_imageSet.clear();
+}
+
+SFLoadTextureModule::~SFLoadTextureModule()
+{
+	//卸载需要卸载的资源
+	m_removveImageId.clear();
+}
+
+int SFLoadTextureModule::loadingObjectCount()
+{
+	return m_loadingSet.size() + m_removveImageId.size();
+}
+
+int SFLoadTextureModule::loadingRemainderObject()
+{
+	return m_loadingSet.size() + m_removveImageId.size()/* + sIndexCount*/;
+}
+
+int SFLoadTextureModule::loadObject()
+{
+	if (!m_loadingSet.empty())
+	{
+		LOADINGSET::iterator itr = m_loadingSet.begin();
+		int imageid = itr->first;
+
+		std::string path;
+		//这里判断文件格式
+		//如果是jpg就不batchnode。其他格式就batchnode
+		std::string imageType =cmap::ImageSetInfo::sharedImageSetInfo()->GetStaticImagePath(imageid, path);
+		if ( path.length())
+		{
+			bool enable = true;
+			cocos2d::CCTexture2D* texture2d = (cocos2d::CCTexture2D*)cocos2d::CCTextureCache::sharedTextureCache()->addImage(path.c_str());
+			if ((std::string::npos != imageType.find("jpg")) || (std::string::npos != imageType.find("jpeg")))
+			{
+				enable = false;
+			}
+			if (texture2d){
+				for (std::list<cocos2d::CCSprite*>::iterator iter = itr->second.begin();
+					iter != itr->second.end(); ++iter)
+				{
+					(*iter)->initWithTexture(texture2d);
+					SFMapBackgroud *spr = (SFMapBackgroud*)(*iter)->getUserData();
+					//spr->addChild(*iter);
+					spr->addChild(*iter, enable,(*iter)->getZOrder(), (*iter)->getTag());
+				}
+				m_imageSet[imageid] = texture2d;
+			}
+			else
+				CCLOG("ERROR : SFLoadTextureModule load image[%d], path is NULL", imageid);
+		}
+		else
+			CCLOG("ERROR : SFLoadTextureModule load image[%d], path is NULL", imageid);
+		m_loadingSet.erase(itr);
+		return loadingRemainderObject();
+	}
+//	else if(!m_removveImageId.empty())
+//	{
+// 		int imageid = m_removveImageId.front();
+// 		m_removveImageId.pop_front();
+// 		IMAGESET::iterator iter = m_imageSet.find(imageid);
+// 		if (iter != m_imageSet.end())
+// 		{
+// 			if(iter->second->isSingleReference())
+// 			{
+// 				cocos2d::CCTextureCache::sharedTextureCache()->removeTexture(iter->second);
+// 				m_imageSet.erase(iter);
+// 			}
+// 		}
+//		return loadingRemainderObject();
+//	}
+	else
+		return loadingRemainderObject();
+}
+
+void SFLoadTextureModule::addLoadObject( int texId,  cocos2d::CCSprite* obj )
+{
+	IMAGESET::iterator iter = m_imageSet.find(texId);
+	if (iter != m_imageSet.end())
+	{
+		obj->initWithTexture(iter->second);
+		SFMapBackgroud *spr = (SFMapBackgroud*)(obj)->getUserData();
+		spr->addChild(obj, true, obj->getZOrder(), obj->getTag());
+	}
+	else
+	{
+		m_loadingSet[texId].push_back(obj);
+	}
+}
+
+void SFLoadTextureModule::removeObject( cocos2d::CCSprite* obj )
+{
+	int texId = ((CCInteger*)obj->getUserObject())->getValue();
+	if(obj->getParent() == NULL)
+	{
+		LOADINGSET::iterator itr = m_loadingSet.find(texId);
+		for (std::list<cocos2d::CCSprite*>::iterator iter = itr->second.begin();
+			iter != itr->second.end(); ++iter)
+		{
+			if(obj == (*iter))
+			{
+				itr->second.erase(iter);
+				obj->setTexture(NULL);
+				return;
+			}
+		}
+	}
+	SFMapBackgroud *spr = (SFMapBackgroud*)(obj)->getUserData();
+	spr->removeChild(obj);
+	obj->setTexture(NULL);
+	IMAGESET::iterator iter = m_imageSet.find(texId);
+	if (iter != m_imageSet.end())
+	{
+		if(iter->second->isSingleReference())
+		{
+			cocos2d::CCTextureCache::sharedTextureCache()->removeTexture(iter->second);
+			m_imageSet.erase(iter);
+		}
+	}
+}
+
+void SFLoadTextureModule::clearObject()
+{
+	m_loadingSet.clear();
+	m_imageSet.clear();
+}
+
+int SFLoadSpriteModule::loadingObjectCount()
+{
+	return 0;
+}
+
+int SFLoadSpriteModule::loadingRemainderObject()
+{
+	return (m_usedModel.size() + m_cacheModel.size()) - 40;
+}
+
+int SFLoadSpriteModule::loadObject()
+{
+	//检查缓冲值是否超过40，如果超过的话就开始释放相应的资源
+	if (m_cacheModel.size() == 0)
+		return 0;
+	if ((m_usedModel.size() + m_cacheModel.size()) > 40)
+	{
+		UsedModelMap::iterator iter = m_cacheModel.begin();
+		CCSpriteFrameCache::sharedSpriteFrameCache()->removeSpriteFramesFromFile(iter->second->plist.c_str());
+		CCLOG("SFLoadSpriteModule removeObject: %s", iter->second->plist.c_str());
+		CC_SAFE_DELETE(iter->second);
+		m_cacheModel.erase(iter);
+	}
+	else
+		return 0;
+
+	return loadingRemainderObject();
+}
+
+int SFLoadSpriteModule::addLoadObject( int modelId, const char* plist )
+{
+	int ret = 0;
+	//检查加入的内容是否在释放内容内，如果在。移除，加入到在使用内
+	UsedModelMap::iterator iter1 = m_cacheModel.find(modelId);
+	if(iter1 != m_cacheModel.end())
+	{
+		//交替位置，总量不改变
+		ret = iter1->second->useCount = 1;
+		m_usedModel[modelId] = iter1->second;
+		m_cacheModel.erase(iter1);
+	}
+	else
+	{
+		//不在cache列表中
+		//检查是否在待释放列表中
+		UsedModelMap::iterator iter = m_usedModel.find(modelId);
+		if(iter != m_usedModel.end())
+		{
+			ret = ++iter->second->useCount;
+		}
+		else
+		{
+			UsedModel* data = new UsedModel;
+			data->useCount = 1;
+			data->plist = plist;
+			m_usedModel.insert(std::pair<int, UsedModel*>(modelId, data));
+			ret = 1;
+			CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile(plist);
+		}
+	}
+	return ret;
+}
+
+void SFLoadSpriteModule::removeLoadObject( int modelId )
+{
+	UsedModelMap::iterator iter = m_usedModel.find(modelId);
+	if(iter != m_usedModel.end())
+	{
+		--iter->second->useCount;
+		if(iter->second->useCount <= 0)
+		{
+			iter->second->useCount = 0;
+			m_cacheModel[modelId] = iter->second;
+			m_usedModel.erase(iter);
+		}
+	}
+	//m_removeModel.push_back(modelId);
+	//删除的内容需要做缓存（最好以实用频率来排序）缓存多于一定量的时候，才考虑删除缓存。
+}
+
+void SFLoadSpriteModule::clearUnused()
+{
+	for (UsedModelMap::iterator iter = m_cacheModel.begin();
+		iter != m_cacheModel.end(); ++iter)
+	{
+		CCSpriteFrameCache::sharedSpriteFrameCache()->removeSpriteFramesFromFile(iter->second->plist.c_str());
+		CC_SAFE_DELETE(iter->second);
+	}
+	m_cacheModel.clear();
+}
+
+SFLoadConfigModule::SFLoadConfigModule()
+{
+
+}
+
+SFLoadConfigModule::~SFLoadConfigModule()
+{
+	m_loadConfig.clear();
+}
+
+int SFLoadConfigModule::loadingObjectCount()
+{
+	return m_loadConfig.size();
+}
+
+int SFLoadConfigModule::loadingRemainderObject()
+{
+	return m_loadConfig.size();
+}
+
+int SFLoadConfigModule::loadObject()
+{
+	if (!m_loadConfig.empty())
+	{
+		ConfigData data = m_loadConfig.front();
+		m_loadConfig.pop_front();
+
+		GAME_RESOURCE->loadCSV(data.filemane.c_str(), data.target, data.callFunc);
+		return m_loadConfig.size();
+	}
+	return 0;
+}
+
+void SFLoadConfigModule::addConfig( const char* filename, CCObject *target, SEL_CallFuncND callFunc )
+{
+	ConfigData data;
+	data.filemane = filename;
+	data.target = target;
+	data.callFunc = callFunc;
+	m_loadConfig.push_back(data);
+}
+
+void SFRenderSpriteModule::addLoadObject( CCNode* renderSpr, int luaHandler )
+{
+	m_loadRenderSprite.insert(std::pair<CCNode*, int>(renderSpr, luaHandler));
+	//m_loadRenderSprite.insert(renderSpr);
+}
+
+bool SFRenderSpriteModule::removeLoadObject( CCNode* renderSpr )
+{
+	std::map<CCNode*, int>::iterator iter = m_loadRenderSprite.find(renderSpr);
+	if (iter != m_loadRenderSprite.end())
+	{
+		iter->first->autorelease();
+		m_loadRenderSprite.erase(iter);
+		return true;
+	}
+	return false;
+}
+
+void SFRenderSpriteModule::clearAllObject()
+{
+	m_loadRenderSprite.clear();
+}
+
+SFRenderSpriteModule::~SFRenderSpriteModule()
+{
+	clearAllObject();
+}
+
+SFRenderSpriteModule::SFRenderSpriteModule()
+{
+
+}
+
+int SFRenderSpriteModule::loadObject()
+{
+	if (!m_loadRenderSprite.empty())
+	{
+		std::map<CCNode*, int>::iterator iter = m_loadRenderSprite.begin();
+
+		CCNode* node = iter->first;
+		node->autorelease();
+		if (0 != iter->second)
+		{
+			CCScriptEngineProtocol* pEngine = CCScriptEngineManager::sharedManager()->getScriptEngine();
+			pEngine->executeRenderSprLoad(iter->second, node, (eRenderLayerTag)node->getTag());
+		}
+		else
+		{
+			SFMapService::instance()->getShareMap()->enterMap(node, (eRenderLayerTag)node->getTag());
+		}
+		m_loadRenderSprite.erase(iter);
+	}
+	return m_loadRenderSprite.size();
+}
+
+int SFRenderSpriteModule::loadingRemainderObject()
+{
+	return m_loadRenderSprite.size();
+}
+
+int SFRenderSpriteModule::loadingObjectCount()
+{
+	return m_loadRenderSprite.size();
+}

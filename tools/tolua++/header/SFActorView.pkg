@@ -1,0 +1,18 @@
+
+class SFActorView : public SFBaseControl
+{
+
+	SFActorView();
+	~SFActorView();
+
+	virtual void onEnter();
+	virtual void onExit();
+
+	void enterView(SFActorSprite* pSprite);
+	void leaveView(SFActorSprite* pSprite);	
+
+	virtual void setPosition(CCPoint &position);
+	virtual void setPosition(float x, float y);
+	void setMoveSpeed(int speed);
+
+};

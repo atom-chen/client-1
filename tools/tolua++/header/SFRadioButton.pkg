@@ -1,0 +1,10 @@
+
+class SFRadioButton : public SFBaseControl
+{
+public:
+	SFRadioButton();
+	~SFRadioButton();
+
+	static SFRadioButton* create();
+
+};

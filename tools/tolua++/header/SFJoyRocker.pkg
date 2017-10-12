@@ -1,0 +1,43 @@
+
+enum RockerDirection{
+	eDir_Up,
+	eDir_LeftUp,
+	eDir_Left,
+	eDir_LeftDown,
+	eDir_Down,
+	eDir_RightDown,
+	eDir_Right,
+	eDir_RightUp,
+	eDir_UnKnow
+};
+
+enum 
+{
+	kRockerDirection,
+	kRockerFinish,
+};
+
+class SFJoyRockerDelegate{
+
+	virtual void rockerDirection(SFJoyRocker *rocker, RockerDirection direction);
+	virtual void rockerFinish(SFJoyRocker *rocker);
+};
+
+class SFJoyRocker :public SFTouchLayer {
+
+
+	static SFJoyRocker*  JoyRockerWithCenter(float aRadius ,CCSprite* aJsSprite,CCSprite* aJsBg,bool _isFollowRole);
+
+	bool initWithCenter(float aRadius ,CCSprite* aJsSprite,CCSprite* aJsBg,bool _isFollowRole);
+
+	void setActive(bool isActive);
+	bool isActive();
+
+	void hideRocker(bool hidden);
+
+	void setDelegate(SFJoyRockerDelegate *delegate);
+	void setDelegateHandler(LUA_FUNCTION nHandler) ;
+	void removeDelegate();
+	void setInActiveRadius(float r);
+};
+

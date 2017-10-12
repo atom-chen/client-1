@@ -1,0 +1,67 @@
+
+enum 
+{
+	kDidTouchBegin,
+	kDidClickItem,
+	kDidDoubleClickItem,
+	kDidLongPressItem,
+	kDidMoveItem,
+	kDidTouchEndItem,
+};
+
+
+
+class SFGridBoxDataSource{
+
+	virtual CCNode* cellFromGrid(SFGridBox *gridBox, int index, CCSize &gridSize)=0;
+};
+
+class SFGridBoxDelegate{
+
+	virtual void didClickItem(SFGridBox *gridBox, int index);
+	virtual void didDoubleClickItem(SFGridBox *gridBox, int index);
+	virtual void didLongPressItem(SFGridBox *gridBox, int index);
+	virtual void didMoveItem(SFGridBox *gridBox, int index, CCTouch *pTouch, CCEvent *pEvent);
+	virtual void didTouchEndItem(SFGridBox *gridBox, int index, CCTouch *pTouch, CCEvent *pEvent);
+};
+
+
+
+class SFGridBox: public SFBaseControl{
+
+	~SFGridBox();
+	CCSize getSize();
+
+	static SFGridBox* create(int columns, CCSize gridSize);
+	bool init(int columns, CCSize boxSize);
+
+
+
+	virtual void addGrid(int count=1);
+	virtual bool removeGrid(int count=1);
+
+	virtual int getSelIndex();
+	virtual void setSelIndex(unsigned int index);
+
+	virtual void setAllMargin(int margin);
+	virtual void setHeightMargin(int margin);
+	virtual void setWidthMargin(int margin);
+
+	virtual CCSize getGridSize();
+	virtual unsigned getGridCount();
+	virtual void reloadGridBox();
+	virtual void reloadCellWithIndex(int index);
+
+
+	virtual void onEnter();
+	virtual void onExit();
+
+
+	virtual void setDelegate(SFGridBoxDelegate *delegate);
+	virtual void setDelegateHandler(LUA_FUNCTION nHandler);
+	virtual void setDataSource(SFGridBoxDataSource *dataSource);
+	virtual void setDataSourceHandler(LUA_FUNCTION nHandler);
+
+};
+
+

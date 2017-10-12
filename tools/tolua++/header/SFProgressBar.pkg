@@ -1,0 +1,20 @@
+
+class SFProgressBar : public SFBaseControl
+{
+	static SFProgressBar* create(CCScale9Sprite* pBarImage, CCSize sizeBar);
+	virtual bool init();
+
+	void setBackground(CCScale9Sprite* pBarBg);
+	void setNumberVisible(bool bVisible);
+	void setTextParam(const char* pFontName, int fontSize, ccColor3B fontColor,ccColor3B strokeColor=ccBLACK, int stroleSize = -1);
+
+	void setMaxNumber(int number);
+	int getMaxNumber();
+
+	void setCurrentNumber(int number);
+	int getCurrentNumber();
+
+	void setPercentage(int number);
+	int getPercentage();
+};
+

@@ -1,0 +1,31 @@
+
+typedef enum
+{
+	kSFVerticalTextAlignmentTop,
+	kSFVerticalTextAlignmentCenter,
+	kSFVerticalTextAlignmentBottom,
+} SFVerticalTextAlignment;
+
+class SFLabel : public SFBaseControl
+{
+
+	SFLabel();
+	virtual ~SFLabel();
+	static SFLabel* create(const char* str, 
+		const char* font, 
+		int fontSize = VisibleRect::autoFontSize(24), 
+		ccColor3B color = ccBLACK, 
+		CCSize size = CCSizeZero);
+	bool init(const char* str, const char* font, int fontSize = VisibleRect::autoFontSize(24), ccColor3B color = ccBLACK, CCSize size = CCSizeZero);
+	void setDimensions(CCSize size);
+	void setString(const char* str);
+	void setFontName(const char* font);
+	void setFontSize(int fontSize);
+	void setVerticalTextAlignment(SFVerticalTextAlignment alignment);
+	CCSize getDimensions();
+	const char* getString();
+	const char* getFontName();
+	int getFontSize();
+	SFVerticalTextAlignment getVerticalTextAlignment();
+	virtual const CCSize& getContentSize();
+};

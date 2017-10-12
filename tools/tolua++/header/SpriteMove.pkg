@@ -1,0 +1,38 @@
+
+class PathPoint :public CCObject
+{
+	static PathPoint* create(float x, float y);
+	float getX();
+	float getY();
+};
+
+	class SpriteMove : public CCObject
+	{
+		SpriteMove();
+		virtual ~SpriteMove();
+
+		virtual bool CreatePath(int fromx, int fromy, int fromdir, int tox, int toy);
+
+		virtual void ClearPath();
+		virtual void SetSpeed(int speed) ;
+		virtual int  GetSpeed();
+
+		virtual void GetEndXY(int &endX, int &endY);
+		virtual CCArray* getMovePoints(int fromx,int fromy, int tox,int toy);
+		//return if should stop
+		virtual bool Tick(int& curX, int& curY, int& dir);
+		static void Init();
+		static void BlockChanged(cocos2d::MemoryStream &stream);
+		static void End();
+
+		static bool IsBlock(int x, int y);
+
+		static bool IsHaveBlock(int startX, int startY, int endX, int endY);
+		int getX();
+		int getY();
+		int getDir();
+		int getEndX();
+		int getEndY();
+		static SpriteMove* create();
+	};
+

@@ -1,0 +1,7 @@
+@name,type
+zpk/config/static.csv,1
+zpk/map/data,0
+zpk/config/modelConfig.csv,1
+zpk/config/actionConfig.csv,1
+zpk/config/modelId.csv,1
+zpk/config/weaponOffset.csv,1

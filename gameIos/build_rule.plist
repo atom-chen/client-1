@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>downloadURL</key>
+	<dict>
+		<key>in</key>
+		<string>http://10.21.210.163:7080/ClientRes/</string>
+		<key>out</key>
+		<string>http://app.uu.cc/games/lyzt/</string>
+	</dict>
+	<key>outputFormat</key>
+	<string>out-ledou</string>
+	<key>version</key>
+	<string>0.0.2.38</string>
+	<key>build_list</key>
+	<dict>
+		<key>downjoy</key>
+		<string></string>
+		<key>pp</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

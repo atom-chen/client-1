@@ -1,0 +1,7 @@
+// 地图渲染层次定义
+enum eRenderLayerTag
+{
+	eRenderLayer_Sprite,
+	eRenderLayer_SpriteBackground, // render sprite background
+	eRenderLayer_Effect
+};

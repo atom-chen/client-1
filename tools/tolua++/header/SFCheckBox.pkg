@@ -1,0 +1,15 @@
+
+class SFCheckBox : public SFBaseControl
+{
+
+	SFCheckBox();
+	virtual ~SFCheckBox();
+	static SFCheckBox* create();
+
+	void initControl(const char* normal, const char* select,LUA_FUNCTION nHandler);
+	void setSelect(bool bSelect);
+	bool getSelect();
+
+	void setEnable(bool bEnable);
+	bool getEnable();
+};

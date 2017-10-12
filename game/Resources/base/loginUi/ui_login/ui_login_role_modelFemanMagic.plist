@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>role_modelFemanMagic.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,0},{383,481}}</string>
+                <key>offset</key>
+                <string>{17,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{155,30},{383,481}}</string>
+                <key>sourceSize</key>
+                <string>{659,541}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>ui_login_role_modelFemanMagic.pvr</string>
+            <key>size</key>
+            <string>{383,481}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:e4e50f4ce4a3b51e7aea13d5758a9ed1:1/1$</string>
+            <key>textureFileName</key>
+            <string>ui_login_role_modelFemanMagic.pvr</string>
+        </dict>
+    </dict>
+</plist>

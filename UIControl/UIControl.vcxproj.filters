@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{186cdc16-29ab-48b1-bc17-edf2316558ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\ui">
+      <UniqueIdentifier>{35f61dec-c648-4ce6-af56-c9bac4418585}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\ui\control">
+      <UniqueIdentifier>{a17766fa-fda5-4feb-8afe-a0444c5207a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\ui\factory">
+      <UniqueIdentifier>{04ea9392-8fe1-4cc0-bce4-792b41438f2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\ui\utils">
+      <UniqueIdentifier>{296de101-5481-421f-9796-9f0bfec22ece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia">
+      <UniqueIdentifier>{289102d7-b945-47ac-ba56-2e492e28c691}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\ui">
+      <UniqueIdentifier>{e9076b43-4ed4-4c85-9d4c-51b72fe546ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\ui\control">
+      <UniqueIdentifier>{00af1c6c-7079-4b35-9b66-923b72308fcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\ui\factory">
+      <UniqueIdentifier>{7cba4e84-aad7-48a1-b8f3-9486fc00d9d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\ui\utils">
+      <UniqueIdentifier>{02d43812-d37d-4fca-8c8d-bb4bf6418a82}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ui\control\SFBaseControl.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFCheckBox.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFControlDef.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFGridBox.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFJoyRocker.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFLabel.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFLabelTex.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFProgressBar.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFRichBox.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFRichLabel.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFScale9Sprite.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFScrollView.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFSharedFontManager.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFTableCell.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFTableView.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFTabView.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFTabViewControl.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFTouchLayer.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\factory\SFControlFactory.h">
+      <Filter>include\ui\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\factory\SFControlFactoryExtension.h">
+      <Filter>include\ui\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\factory\SFControlFactoryManager.h">
+      <Filter>include\ui\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\utils\ThirdTool.h">
+      <Filter>include\ui\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\utils\VisibleRect.h">
+      <Filter>include\ui\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\ControlDef.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\SFUIFactory.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFGraySprite.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\control\SFControlSlider.h">
+      <Filter>include\ui\control</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sofia\ui\control\SFBaseControl.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFCheckBox.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFGridBox.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFJoyRocker.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFLabel.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFLabelTex.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFProgressBar.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFRichBox.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFRichLabel.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFScale9Sprite.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFScrollView.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFSharedFontManager.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFTableView.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFTabView.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFTabViewControl.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFTouchLayer.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\factory\SFControlFactory.cpp">
+      <Filter>sofia\ui\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\factory\SFControlFactoryExtension.cpp">
+      <Filter>sofia\ui\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\factory\SFControlFactoryManager.cpp">
+      <Filter>sofia\ui\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\utils\ThirdTool.cpp">
+      <Filter>sofia\ui\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\utils\VisibleRect.cpp">
+      <Filter>sofia\ui\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\SFUIFactory.cpp">
+      <Filter>sofia\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFGraySprite.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+    <ClCompile Include="sofia\ui\control\SFControlSlider.cpp">
+      <Filter>sofia\ui\control</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

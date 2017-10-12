@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>QD_Key</key>
+	<string>pp</string>
+	<key>QD_Name</key>
+	<string>pp</string>
+	<key>QD_Code1</key>
+	<string>6</string>
+	<key>QD_Code2</key>
+	<string>6</string>
+	<key>QD_Property1</key>
+	<string>530c7b1de1382310d54a8657</string>
+	<key>QD_Property2</key>
+	<string>832cd20ddb7e4deca616279750e00525</string>
+	<key>Game_Key</key>
+	<string>lieyanzhetian</string>
+	<key>Platform</key>
+	<string>ios</string>
+	<key>Suffix</key>
+	<string>ipa</string>
+	<key>testerLoginSettingUrl</key>
+	<string>http://rxxt.youai.t001.gzyouai.com/rexuexiantu/servers/test_tmp.json</string>
+	<key>Service_Url</key>
+	<string>http://all.service.gzyouai.com/service/services</string>
+	<key>LoginSettingUrl</key>
+	<string>http://10.21.210.163:7080/lieyanzhetian/servers/9133.json</string>
+	<key>BackupLoginSettingUrl</key>
+	<string>http://backup.static.gzyouai.com/rexuexiantu/servers/9133.json</string>
+	<key>TrackPayOrderUrl</key>
+	<string>http://9133.bridge.gzyouai.com/9133/trackPayOrder</string>
+	<key>AuthUrl</key>
+	<string>http://10.21.212.20:8080/bridge/pp/auth</string>
+</dict>
+</plist>

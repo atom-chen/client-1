@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gamelogic", "gamelogic.vcxproj", "{3621FB9B-57DA-4C5D-8C54-EB2D6566D24A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libFramework", "framework\proj.win32\libFramework.vcxproj", "{130ED192-9C5D-4739-A5ED-172ABC616BA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		editor_debug|Win32 = editor_debug|Win32
+		editor_release|Win32 = editor_release|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3621FB9B-57DA-4C5D-8C54-EB2D6566D24A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3621FB9B-57DA-4C5D-8C54-EB2D6566D24A}.Debug|Win32.Build.0 = Debug|Win32
+		{3621FB9B-57DA-4C5D-8C54-EB2D6566D24A}.editor_debug|Win32.ActiveCfg = Release|Win32
+		{3621FB9B-57DA-4C5D-8C54-EB2D6566D24A}.editor_debug|Win32.Build.0 = Release|Win32
+		{3621FB9B-57DA-4C5D-8C54-EB2D6566D24A}.editor_release|Win32.ActiveCfg = Release|Win32
+		{3621FB9B-57DA-4C5D-8C54-EB2D6566D24A}.editor_release|Win32.Build.0 = Release|Win32
+		{3621FB9B-57DA-4C5D-8C54-EB2D6566D24A}.Release|Win32.ActiveCfg = Release|Win32
+		{3621FB9B-57DA-4C5D-8C54-EB2D6566D24A}.Release|Win32.Build.0 = Release|Win32
+		{130ED192-9C5D-4739-A5ED-172ABC616BA8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{130ED192-9C5D-4739-A5ED-172ABC616BA8}.Debug|Win32.Build.0 = Debug|Win32
+		{130ED192-9C5D-4739-A5ED-172ABC616BA8}.editor_debug|Win32.ActiveCfg = editor_debug|Win32
+		{130ED192-9C5D-4739-A5ED-172ABC616BA8}.editor_debug|Win32.Build.0 = editor_debug|Win32
+		{130ED192-9C5D-4739-A5ED-172ABC616BA8}.editor_release|Win32.ActiveCfg = editor_release|Win32
+		{130ED192-9C5D-4739-A5ED-172ABC616BA8}.editor_release|Win32.Build.0 = editor_release|Win32
+		{130ED192-9C5D-4739-A5ED-172ABC616BA8}.Release|Win32.ActiveCfg = Release|Win32
+		{130ED192-9C5D-4739-A5ED-172ABC616BA8}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

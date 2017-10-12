@@ -1,0 +1,16 @@
+
+class SFControlFactoryManager : public CCObject
+{
+	SFControlFactoryManager();
+	~SFControlFactoryManager();
+
+	void LoadAllFacotry();
+
+	void AddFactory(const char* controlType, SFControlFactory* factory);
+	void RemoveFactory(const char* controlType);
+
+	SFControlFactory* getFactory(const char* controlType);
+
+	static SFControlFactoryManager* shareCCControlFactoryMgr();
+
+};

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F1B28C93-E4B8-46EB-A8C3-4D5C25D32C8E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>IosSDKHelper</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B16A2F53-96EE-40B8-A5A8-1E77B3994C04</key>
+		<string>svn://10.21.210.164/Sophia</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>client/trunk/gamelogic/iosSDk/9133/IosSDKHelper/IosSDKHelper.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B16A2F53-96EE-40B8-A5A8-1E77B3994C04</key>
+		<string>../../../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>B16A2F53-96EE-40B8-A5A8-1E77B3994C04</key>
+		<string>svn://10.21.210.164/Sophia</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://10.21.210.164/Sophia/client/trunk/gamelogic/iosSDk/9133/IosSDKHelper/IosSDKHelper.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B16A2F53-96EE-40B8-A5A8-1E77B3994C04</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B16A2F53-96EE-40B8-A5A8-1E77B3994C04</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Sophia</string>
+		</dict>
+	</array>
+</dict>
+</plist>

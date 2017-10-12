@@ -1,0 +1,50 @@
+enum NetType {
+    kNotNetwork = 1,
+    kWifi,
+    kNotWifi,
+    };
+class SFGameHelper
+{
+
+	static std::string getExtStoragePath();
+	static bool isDirExist(const char* path);
+	static bool createDir(const char* path);
+	static void copyResouce(const char* resPath, const char* destPath,LUA_FUNCTION handler);
+	static std::string getClientVersion();
+	static void updateClient(const char* pszUrl, const char* pszNewVersion, bool bForce);
+	static int getMainVersion();
+	static int getSubVersion();
+	static int getCurrentNetWork();
+  static void moveFile(const char* resPath, const char* destPath,LUA_FUNCTION handler);
+  static void deleteFile(const char* resPath,LUA_FUNCTION handler);
+
+	static void setTag(CCArray* tags); 
+	static void removeTag(const char* tag);			
+	static void startPush();			
+	static void stopPush();						
+
+	static void showMenu(const char* title, const char* content, const char* linkUrl, const char* imgUrl, LUA_FUNCTION handler);
+	static void share(const char* platform, bool bEdit,const char* title, const char* content, const char* linkUrl, const char* imgUrl, LUA_FUNCTION handler);
+
+	static void setSessionTimeout(int timeout);  
+    static void enableExceptionLog(); 
+	static void startStatistics(const char* reportId,const char* channelId);
+    static void copy2PasteBoard(const char* str); 
+    
+    static float getDensity();
+	static int getDensityDpi();
+	static std::string getManuFactuer();
+	static std::string getModel();
+	static std::string getSystemVer();
+	static void setAppUpdateType(int type, int tag);
+	static void setAppCallback(LUA_FUNCTION handler);
+	
+	static std::string urlEncode(const char* str);
+	static std::string urlDecode(const char* str);
+	static std::string base64Encode(const char* str);
+	static std::string base64Decode(const char* str);
+	
+	static void setFloatBtnVisible(bool bVisible);
+	static long long getRomFreeSpace();
+	static long long getRamSpace();
+};

@@ -1,0 +1,29 @@
+
+
+typedef unsigned int CCControlEvent;
+
+typedef void (CCObject::*SEL_CCControlHandler)(CCObject*, CCControlEvent);
+
+
+class CCInvocation : public CCObject
+{
+
+
+ virtual SEL_CCControlHandler getAction(void) const { return m_action; }
+
+
+ virtual CCObject getTarget(void) const { return m_target; }
+
+
+ virtual CCControlEvent getControlEvent(void) const { return m_controlEvent; }
+
+
+    static CCInvocation* create(CCObject* target, SEL_CCControlHandler action, CCControlEvent controlEvent);
+	static CCInvocation* create(int nHandler, int controlEvent);
+
+    CCInvocation(CCObject* target, SEL_CCControlHandler action, CCControlEvent controlEvent);
+	CCInvocation(int nHandler, int controlEvent);
+
+    void invoke(CCObject* sender);
+};
+

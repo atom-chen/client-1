@@ -1,0 +1,123 @@
+
+typedef enum {
+	kSFScrollViewDirectionNone = -1,
+	kSFScrollViewDirectionHorizontal = 1,
+	kSFScrollViewDirectionVertical = 2,
+	kSFScrollViewDirectionBoth = 4
+} SFScrollViewDirection;
+
+typedef enum {
+	kSFScrollViewFillTopDown,
+	kSFScrollViewFillBottomUp
+} SFScrollViewVerticalFillOrder;
+
+
+class SFScrollViewDelegate
+{
+
+	virtual ~SFScrollViewDelegate();
+	virtual void scrollViewDidScroll(SFScrollView* view);
+	virtual void scrollViewDidZoom(SFScrollView* view);
+	virtual void scrollViewTouchBegin(SFScrollView* view, CCPoint pt);
+	virtual void scrollViewTouchMove(SFScrollView* view, CCPoint pt);
+	virtual void scrollViewTouchEnd(SFScrollView* view, CCPoint pt);
+	virtual void scrollViewDidAnimateScrollEnd(SFScrollView* view);
+};
+
+
+class SFScrollView : public SFBaseControl
+{
+
+	SFScrollView();
+	virtual ~SFScrollView();
+
+	virtual bool init();
+	virtual void registerWithTouchDispatcher();
+
+	static SFScrollView* viewWithViewSize(CCSize size, CCNode* container = NULL);
+
+	static SFScrollView* create(CCSize size, CCNode* container = NULL);
+
+
+	static SFScrollView* node();
+
+
+	static SFScrollView* create();
+
+	bool initWithViewSize(CCSize size, CCNode* container = NULL);
+
+
+	void setContentOffset(CCPoint offset, bool animated = false);
+	CCPoint getContentOffset();
+
+	void setContentOffsetInDuration(CCPoint offset, float dt); 
+
+	void setZoomScale(float s);
+
+	void setZoomScale(float s, bool animated);
+
+	float getZoomScale();
+
+	void setZoomScaleInDuration(float s, float dt);
+
+	CCPoint minContainerOffset();
+
+	CCPoint maxContainerOffset(); 
+
+	bool isNodeVisible(CCNode * node);
+
+	void pause(CCObject* sender);
+
+	void resume(CCObject* sender);
+
+
+	bool isDragging() ;
+	bool isTouchMoved() ;
+	bool isBounceable() ;
+	void setBounceable(bool bBounceable) ;
+
+	CCSize getViewSize() ;
+	void setViewSize(CCSize size);
+
+	CCNode * getContainer();
+	void setContainer(CCNode * pContainer);
+
+	SFScrollViewDirection getDirection() ;
+	virtual void setDirection(SFScrollViewDirection eDirection) ;
+
+	SFScrollViewDelegate* getDelegate() ;
+	void setDelegate(SFScrollViewDelegate* pDelegate) ;
+
+	virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
+	virtual void ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent);
+	virtual void ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent);
+	virtual void ccTouchCancelled(CCTouch *pTouch, CCEvent *pEvent);
+
+	virtual void setContentSize(const CCSize & size);
+	virtual const CCSize & getContentSize();
+
+	void updateInset();
+
+	bool isClippingToBounds() ;
+	void setClippingToBounds(bool bClippingToBounds) ;
+
+	virtual void visit();
+	virtual void addChild(CCNode * child, int zOrder, int tag);
+	virtual void addChild(CCNode * child, int zOrder);
+	virtual void addChild(CCNode * child);
+	void setTouchEnabled(bool e);
+
+
+	void setPageEnable(bool bEnable);
+	
+	int getPage();
+	void setCurrentPage(int page);
+	void setHandler(LUA_FUNCTION nHandler);
+	virtual bool getAutoScroll(void) const ;
+	virtual void setAutoScroll(bool var);
+	void setPageSize(CCSize pageSize);
+	CCSize getPageSize();
+};
+
+
+ 

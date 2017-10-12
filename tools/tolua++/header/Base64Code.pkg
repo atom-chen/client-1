@@ -1,0 +1,5 @@
+class Base64Code
+{
+	static std::string decode(std::string encodeString);
+	static std::string encode(unsigned char* bytes_to_encode, unsigned int in_len);
+};

@@ -1,0 +1,47 @@
+class SFLoginManager
+{
+	static SFLoginManager* getInstance();
+	~SFLoginManager();
+	void requestLogin();
+	void setLuaCallback(LUA_FUNCTION handler);
+	void onLoginResult(int errCode, const char* data);
+	void requestServerList();
+	void setLuaRequestServerListCB(LUA_FUNCTION handler);
+	void getServerListSuccess(char* data);
+	void gotoBridgeAuth();
+	std::string getAuthData();
+	void setLuaBridgeAuthCB(LUA_FUNCTION handler);
+	std::string getBridgeUrl();
+	void bridgeAuthSuccess(const char* response);
+	void submitExtendData(const char* extendData);
+	std::string getLoginSettingUrl();
+	int getQDCode1();
+	int getQDCode2();
+	void showWaitView(int time);
+	void hideWaitView();
+	void setLuaWaitViewCB(LUA_FUNCTION handler);
+	std::string getUUid();
+	
+	void openPay(char* rechargeChannelJson, LUA_FUNCTION handler);
+	void executePayCallback(LUA_FUNCTION handler, int state); 
+	
+	std::string getGameKey();
+	std::string getPlatform();
+	std::string getQDKey();
+	std::string getSuffix();
+	std::string getAppKey();
+    std::string getClientKey();
+    void setPlayerId(const char* playerId);
+    const char* getPlayerId();
+    void setServerId(const char* serverId);
+    const char* getServerId();
+	bool needShowUserCenter();
+	void showUserCenter();
+	void logout();
+	bool needShowCustomTopupView();
+	void openPayWithCustomAmount(char* dataJson);
+	void setLogOutHandler(LUA_FUNCTION handler);
+	void excuteLogOutCallBack();
+	void initPaymentObserver();
+	void setPlayerName(const char* playerName);
+};

@@ -1,0 +1,16 @@
+
+class SFRichLabel : public SFBaseControl
+{
+	static SFRichLabel* create();
+	void appendFormatText(const char* pText);
+	void clearAll();
+	void setEventHandler(LUA_FUNCTION nHandler);
+	void setFont(const char* font);
+	void setFontSize(int size);
+	void setGaps(float gap);
+	float getGaps();
+	CCSize getDimensions(void);
+	void setDimensions(CCSize var);
+};
+
+

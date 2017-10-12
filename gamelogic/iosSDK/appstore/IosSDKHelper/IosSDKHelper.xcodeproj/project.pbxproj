@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0922C8D219416D930058681B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0922C8D119416D930058681B /* Foundation.framework */; };
+		0922C8E019416D930058681B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0922C8DF19416D930058681B /* XCTest.framework */; };
+		0922C8E119416D930058681B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0922C8D119416D930058681B /* Foundation.framework */; };
+		0922C8E319416D930058681B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0922C8E219416D930058681B /* UIKit.framework */; };
+		0922C8E619416D930058681B /* libIosSDKHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0922C8CE19416D930058681B /* libIosSDKHelper.a */; };
+		0922C8EC19416D930058681B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0922C8EA19416D930058681B /* InfoPlist.strings */; };
+		0922C8EE19416D930058681B /* IosSDKHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0922C8ED19416D930058681B /* IosSDKHelperTests.m */; };
+		0922C8FB19416DCE0058681B /* IosSDKHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0922C8FA19416DCE0058681B /* IosSDKHelper.mm */; };
+		096AA178196D7342009372D3 /* SFGameAnalyzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 096AA175196D7342009372D3 /* SFGameAnalyzer.cpp */; };
+		096AA179196D7342009372D3 /* SFGameHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 096AA176196D7342009372D3 /* SFGameHelper.mm */; };
+		096AA17A196D7342009372D3 /* SFLoginManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 096AA177196D7342009372D3 /* SFLoginManager.mm */; };
+		096AA1A9196E88F1009372D3 /* MainSDKHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 096AA1A8196E88F1009372D3 /* MainSDKHelper.mm */; };
+		096AA1AC196E89D4009372D3 /* LDGAMEAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 096AA1AB196E89D4009372D3 /* LDGAMEAdapter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0922C8E419416D930058681B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0922C8C619416D930058681B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0922C8CD19416D930058681B;
+			remoteInfo = IosSDKHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0922C8CC19416D930058681B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0922C8CE19416D930058681B /* libIosSDKHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIosSDKHelper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0922C8D119416D930058681B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0922C8D519416D930058681B /* IosSDKHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IosSDKHelper-Prefix.pch"; sourceTree = "<group>"; };
+		0922C8DE19416D930058681B /* IosSDKHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosSDKHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0922C8DF19416D930058681B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0922C8E219416D930058681B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		0922C8E919416D930058681B /* IosSDKHelperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IosSDKHelperTests-Info.plist"; sourceTree = "<group>"; };
+		0922C8EB19416D930058681B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0922C8ED19416D930058681B /* IosSDKHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IosSDKHelperTests.m; sourceTree = "<group>"; };
+		0922C8FA19416DCE0058681B /* IosSDKHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IosSDKHelper.mm; sourceTree = "<group>"; };
+		096AA168196D6D99009372D3 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../../../third_part/Reachability.h; sourceTree = "<group>"; };
+		096AA170196D71A8009372D3 /* com_morningglory_shell_GardeniaLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = com_morningglory_shell_GardeniaLogin.h; sourceTree = "<group>"; };
+		096AA171196D71A8009372D3 /* SFGameAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFGameAnalyzer.h; sourceTree = "<group>"; };
+		096AA172196D71A8009372D3 /* SFGameHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFGameHelper.h; sourceTree = "<group>"; };
+		096AA173196D71A8009372D3 /* SFLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoginManager.h; sourceTree = "<group>"; };
+		096AA175196D7342009372D3 /* SFGameAnalyzer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SFGameAnalyzer.cpp; sourceTree = "<group>"; };
+		096AA176196D7342009372D3 /* SFGameHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SFGameHelper.mm; sourceTree = "<group>"; };
+		096AA177196D7342009372D3 /* SFLoginManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SFLoginManager.mm; sourceTree = "<group>"; };
+		096AA1A6196E88E9009372D3 /* IosSDKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IosSDKHelper.h; path = ../../../IosSDKHelper.h; sourceTree = "<group>"; };
+		096AA1A7196E88F1009372D3 /* MainSDKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainSDKHelper.h; path = ../../../MainSDKHelper.h; sourceTree = "<group>"; };
+		096AA1A8196E88F1009372D3 /* MainSDKHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MainSDKHelper.mm; path = ../../../MainSDKHelper.mm; sourceTree = "<group>"; };
+		096AA1AA196E8983009372D3 /* LDGAMEAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LDGAMEAdapter.h; path = ../../../LDGAMEAdapter.h; sourceTree = "<group>"; };
+		096AA1AB196E89D4009372D3 /* LDGAMEAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDGAMEAdapter.m; sourceTree = "<group>"; };
+		09A2478C1949CB470049DEEB /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = ../../sdk/Base64.h; sourceTree = "<group>"; };
+		09A2478D1949CB470049DEEB /* Base64Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64Defines.h; path = ../../sdk/Base64Defines.h; sourceTree = "<group>"; };
+		09A2478F1949CB470049DEEB /* LDSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LDSDK.h; path = ../../sdk/LDSDK.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0922C8CB19416D930058681B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0922C8D219416D930058681B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0922C8DB19416D930058681B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0922C8E619416D930058681B /* libIosSDKHelper.a in Frameworks */,
+				0922C8E019416D930058681B /* XCTest.framework in Frameworks */,
+				0922C8E319416D930058681B /* UIKit.framework in Frameworks */,
+				0922C8E119416D930058681B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0922C8C519416D930058681B = {
+			isa = PBXGroup;
+			children = (
+				096AA167196D462C009372D3 /* third_part */,
+				096AA166196D4624009372D3 /* gameLogic */,
+				0922C8D319416D930058681B /* IosSDKHelper */,
+				0922C8E719416D930058681B /* IosSDKHelperTests */,
+				0922C8D019416D930058681B /* Frameworks */,
+				0922C8CF19416D930058681B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0922C8CF19416D930058681B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0922C8CE19416D930058681B /* libIosSDKHelper.a */,
+				0922C8DE19416D930058681B /* IosSDKHelperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0922C8D019416D930058681B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0922C8D119416D930058681B /* Foundation.framework */,
+				0922C8DF19416D930058681B /* XCTest.framework */,
+				0922C8E219416D930058681B /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0922C8D319416D930058681B /* IosSDKHelper */ = {
+			isa = PBXGroup;
+			children = (
+				096AA1AA196E8983009372D3 /* LDGAMEAdapter.h */,
+				096AA1AB196E89D4009372D3 /* LDGAMEAdapter.m */,
+				096AA1A7196E88F1009372D3 /* MainSDKHelper.h */,
+				096AA1A8196E88F1009372D3 /* MainSDKHelper.mm */,
+				096AA1A6196E88E9009372D3 /* IosSDKHelper.h */,
+				09A2478C1949CB470049DEEB /* Base64.h */,
+				09A2478D1949CB470049DEEB /* Base64Defines.h */,
+				09A2478F1949CB470049DEEB /* LDSDK.h */,
+				0922C8FA19416DCE0058681B /* IosSDKHelper.mm */,
+				0922C8D419416D930058681B /* Supporting Files */,
+			);
+			path = IosSDKHelper;
+			sourceTree = "<group>";
+		};
+		0922C8D419416D930058681B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0922C8D519416D930058681B /* IosSDKHelper-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0922C8E719416D930058681B /* IosSDKHelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				0922C8ED19416D930058681B /* IosSDKHelperTests.m */,
+				0922C8E819416D930058681B /* Supporting Files */,
+			);
+			path = IosSDKHelperTests;
+			sourceTree = "<group>";
+		};
+		0922C8E819416D930058681B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0922C8E919416D930058681B /* IosSDKHelperTests-Info.plist */,
+				0922C8EA19416D930058681B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		096AA166196D4624009372D3 /* gameLogic */ = {
+			isa = PBXGroup;
+			children = (
+				096AA174196D7342009372D3 /* ios */,
+				096AA16D196D71A8009372D3 /* include */,
+			);
+			name = gameLogic;
+			sourceTree = "<group>";
+		};
+		096AA167196D462C009372D3 /* third_part */ = {
+			isa = PBXGroup;
+			children = (
+				096AA168196D6D99009372D3 /* Reachability.h */,
+			);
+			name = third_part;
+			sourceTree = "<group>";
+		};
+		096AA16D196D71A8009372D3 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				096AA16E196D71A8009372D3 /* platform */,
+			);
+			name = include;
+			path = ../../../include;
+			sourceTree = "<group>";
+		};
+		096AA16E196D71A8009372D3 /* platform */ = {
+			isa = PBXGroup;
+			children = (
+				096AA16F196D71A8009372D3 /* android */,
+				096AA171196D71A8009372D3 /* SFGameAnalyzer.h */,
+				096AA172196D71A8009372D3 /* SFGameHelper.h */,
+				096AA173196D71A8009372D3 /* SFLoginManager.h */,
+			);
+			path = platform;
+			sourceTree = "<group>";
+		};
+		096AA16F196D71A8009372D3 /* android */ = {
+			isa = PBXGroup;
+			children = (
+				096AA170196D71A8009372D3 /* com_morningglory_shell_GardeniaLogin.h */,
+			);
+			path = android;
+			sourceTree = "<group>";
+		};
+		096AA174196D7342009372D3 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				096AA175196D7342009372D3 /* SFGameAnalyzer.cpp */,
+				096AA176196D7342009372D3 /* SFGameHelper.mm */,
+				096AA177196D7342009372D3 /* SFLoginManager.mm */,
+			);
+			name = ios;
+			path = ../../../sofia/platform/ios;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0922C8CD19416D930058681B /* IosSDKHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0922C8F119416D930058681B /* Build configuration list for PBXNativeTarget "IosSDKHelper" */;
+			buildPhases = (
+				0922C8CA19416D930058681B /* Sources */,
+				0922C8CB19416D930058681B /* Frameworks */,
+				0922C8CC19416D930058681B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IosSDKHelper;
+			productName = IosSDKHelper;
+			productReference = 0922C8CE19416D930058681B /* libIosSDKHelper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		0922C8DD19416D930058681B /* IosSDKHelperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0922C8F419416D930058681B /* Build configuration list for PBXNativeTarget "IosSDKHelperTests" */;
+			buildPhases = (
+				0922C8DA19416D930058681B /* Sources */,
+				0922C8DB19416D930058681B /* Frameworks */,
+				0922C8DC19416D930058681B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0922C8E519416D930058681B /* PBXTargetDependency */,
+			);
+			name = IosSDKHelperTests;
+			productName = IosSDKHelperTests;
+			productReference = 0922C8DE19416D930058681B /* IosSDKHelperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0922C8C619416D930058681B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = youai;
+			};
+			buildConfigurationList = 0922C8C919416D930058681B /* Build configuration list for PBXProject "IosSDKHelper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0922C8C519416D930058681B;
+			productRefGroup = 0922C8CF19416D930058681B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0922C8CD19416D930058681B /* IosSDKHelper */,
+				0922C8DD19416D930058681B /* IosSDKHelperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0922C8DC19416D930058681B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0922C8EC19416D930058681B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0922C8CA19416D930058681B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0922C8FB19416DCE0058681B /* IosSDKHelper.mm in Sources */,
+				096AA178196D7342009372D3 /* SFGameAnalyzer.cpp in Sources */,
+				096AA179196D7342009372D3 /* SFGameHelper.mm in Sources */,
+				096AA17A196D7342009372D3 /* SFLoginManager.mm in Sources */,
+				096AA1A9196E88F1009372D3 /* MainSDKHelper.mm in Sources */,
+				096AA1AC196E89D4009372D3 /* LDGAMEAdapter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0922C8DA19416D930058681B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0922C8EE19416D930058681B /* IosSDKHelperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0922C8E519416D930058681B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0922C8CD19416D930058681B /* IosSDKHelper */;
+			targetProxy = 0922C8E419416D930058681B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0922C8EA19416D930058681B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0922C8EB19416D930058681B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0922C8EF19416D930058681B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SYMROOT = ../../build;
+			};
+			name = Debug;
+		};
+		0922C8F019416D930058681B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				SYMROOT = ../../build;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0922C8F219416D930058681B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DSTROOT = /tmp/IosSDKHelper.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/youai/Documents/Sophia/client/trunk/gamelogic/iosSDk/dc/sdk,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IosSDKHelper/IosSDKHelper-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"COCOS2D_DEBUG=1",
+					CC_TARGET_OS_IPHONE,
+					"CC_LUA_ENGINE_ENABLED=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"../../../include/platform\"",
+					"\"../../../../cocos2dx/include\"",
+					"\"../../../../cocos2dx/kazmath/include\"",
+					"\"../../../../cocos2dx/platform/ios\"",
+					"\"../../../../cocos2dx/platform/third_party/ios\"",
+					"\"../../../../cocos2dx/platform\"",
+					"\"../../../../cocos2dx\"",
+					../sdk,
+					"\"../../../../gamelogic\"",
+					"\"../../../../framework\"",
+					"\"../../../../framework/include\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/youai/Documents/Sophia/client/trunk/gamelogic/iosSDk/ld/sdk,
+					/Users/youai/framework/trunk/gamelogic/iosSDk/ld/sdk,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYMROOT = ../../build/appstore;
+			};
+			name = Debug;
+		};
+		0922C8F319416D930058681B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DSTROOT = /tmp/IosSDKHelper.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/youai/Documents/Sophia/client/trunk/gamelogic/iosSDk/dc/sdk,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IosSDKHelper/IosSDKHelper-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					CC_TARGET_OS_IPHONE,
+					"CC_LUA_ENGINE_ENABLED=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"../../../include/platform\"",
+					"\"../../../../cocos2dx/include\"",
+					"\"../../../../cocos2dx/kazmath/include\"",
+					"\"../../../../cocos2dx/platform/ios\"",
+					"\"../../../../cocos2dx/platform/third_party/ios\"",
+					"\"../../../../cocos2dx/platform\"",
+					"\"../../../../cocos2dx\"",
+					../sdk,
+					"\"../../../../gamelogic\"",
+					"\"../../../../framework\"",
+					"\"../../../../framework/include\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/youai/Documents/Sophia/client/trunk/gamelogic/iosSDk/ld/sdk,
+					/Users/youai/framework/trunk/gamelogic/iosSDk/ld/sdk,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYMROOT = ../../build/appstore;
+			};
+			name = Release;
+		};
+		0922C8F519416D930058681B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IosSDKHelper/IosSDKHelper-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "IosSDKHelperTests/IosSDKHelperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0922C8F619416D930058681B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IosSDKHelper/IosSDKHelper-Prefix.pch";
+				INFOPLIST_FILE = "IosSDKHelperTests/IosSDKHelperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0922C8C919416D930058681B /* Build configuration list for PBXProject "IosSDKHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0922C8EF19416D930058681B /* Debug */,
+				0922C8F019416D930058681B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0922C8F119416D930058681B /* Build configuration list for PBXNativeTarget "IosSDKHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0922C8F219416D930058681B /* Debug */,
+				0922C8F319416D930058681B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0922C8F419416D930058681B /* Build configuration list for PBXNativeTarget "IosSDKHelperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0922C8F519416D930058681B /* Debug */,
+				0922C8F619416D930058681B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0922C8C619416D930058681B /* Project object */;
+}

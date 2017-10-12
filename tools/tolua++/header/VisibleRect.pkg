@@ -1,0 +1,69 @@
+
+enum
+{
+	LAYOUT_CENTER			= 1 << 0,
+	LAYOUT_TOP_INSIDE		= 1 << 1,
+	LAYOUT_BOTTOM_INSIDE	= 1 << 2,
+	LAYOUT_LEFT_INSIDE		= 1 << 3,
+	LAYOUT_RIGHT_INSIDE		= 1 << 4,
+	LAYOUT_TOP_OUTSIDE		= 1 << 5,
+	LAYOUT_BOTTOM_OUTSIDE	= 1 << 6,
+	LAYOUT_LEFT_OUTSIDE		= 1 << 7,
+	LAYOUT_RIGHT_OUTSIDE	= 1 << 8,
+	LAYOUT_CENTER_X			= 1 << 9,
+	LAYOUT_CENTER_Y			= 1 << 10
+};
+typedef unsigned int RelativeLayout;
+
+class VisibleRect
+{
+    static CCRect&  rect();
+    static CCPoint& center();
+    static CCPoint& top();
+    static CCPoint& topRight();
+    static CCPoint& right();
+    static CCPoint& bottomRight();
+    static  CCPoint& bottom();
+    static CCPoint& bottomLeft();
+    static CCPoint& left();
+    static CCPoint& topLeft();
+	static CCPoint& getScaleXY(CCSize winSize);
+	static CCPoint& getNodeScale(CCNode *nd, CCSize size);
+	static void autoScaleNode(CCNode *nd , CCPoint anchorPoint);
+
+	static float SFGetScaleX();
+	static float SFGetScaleY();
+	static float SFGetScale();
+	static float SFGetScaleOverOne();
+
+	enum ScaleType{
+		eScaleXY,
+		eScaleMin,
+		eScaleMax
+	};
+
+	static CCSize sizeToFix(CCSize size, int width, int height);
+
+	static void autoSizeNode(CCNode *node, ScaleType type = eScaleMin);
+	
+
+	static void autoSizeNodeForSmall(CCNode *node);
+
+
+	static int autoFontSize(int fontSize/*CCNode *node*/);
+
+
+	static void relativePosition(CCNode *node, CCNode *target, RelativeLayout layout = LAYOUT_CENTER, CCPoint offset = CCPoint(0, 0), bool bAutoAdaptation = true);
+
+
+	static CCSize nodeSize(CCNode *node);
+
+
+	static CCSize getScaleSize(CCSize size);
+
+
+	static CCPoint getScalePoint(CCPoint pt);
+
+
+	static float getScaleLength(float length);
+};

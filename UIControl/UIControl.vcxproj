@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3F870279-9765-4652-B0A1-F36890152348}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>UIControl</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_LIB;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\cocos2dx;$(ProjectDir)..\cocos2dx\include;$(ProjectDir)..\cocos2dx\kazmath\include;$(ProjectDir)..\cocos2dx\support;$(ProjectDir)..\cocos2dx\platform\win32;$(ProjectDir)..\cocos2dx\platform\third_party\win32;$(ProjectDir)..\cocos2dx\platform\third_party\win32\pthread;$(ProjectDir)..\cocos2dx\platform\third_party\win32\OGLES;$(ProjectDir);$(ProjectDir)include;$(ProjectDir)sofia\utils;$(ProjectDir)..\external;$(ProjectDir)..\external\chipmunk\include\chipmunk;$(ProjectDir)..\extensions;$(ProjectDir)..\..\CocosDenshion\include;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\iconv;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\zlib;$(ProjectDir)..\..\third_party\vlc\include;$(ProjectDir)..\extensions\CocoStudio\Json;$(ProjectDir)..\framework;$(ProjectDir)..\framework\include;$(ProjectDir)..\cocos2dx\platform\third_party\win32\iconv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ui\ControlDef.h" />
+    <ClInclude Include="include\ui\control\SFBaseControl.h" />
+    <ClInclude Include="include\ui\control\SFCheckBox.h" />
+    <ClInclude Include="include\ui\control\SFControlDef.h" />
+    <ClInclude Include="include\ui\control\SFControlSlider.h" />
+    <ClInclude Include="include\ui\control\SFGraySprite.h" />
+    <ClInclude Include="include\ui\control\SFGridBox.h" />
+    <ClInclude Include="include\ui\control\SFJoyRocker.h" />
+    <ClInclude Include="include\ui\control\SFLabel.h" />
+    <ClInclude Include="include\ui\control\SFLabelTex.h" />
+    <ClInclude Include="include\ui\control\SFProgressBar.h" />
+    <ClInclude Include="include\ui\control\SFRichBox.h" />
+    <ClInclude Include="include\ui\control\SFRichLabel.h" />
+    <ClInclude Include="include\ui\control\SFScale9Sprite.h" />
+    <ClInclude Include="include\ui\control\SFScrollView.h" />
+    <ClInclude Include="include\ui\control\SFSharedFontManager.h" />
+    <ClInclude Include="include\ui\control\SFTableCell.h" />
+    <ClInclude Include="include\ui\control\SFTableView.h" />
+    <ClInclude Include="include\ui\control\SFTabView.h" />
+    <ClInclude Include="include\ui\control\SFTabViewControl.h" />
+    <ClInclude Include="include\ui\control\SFTouchLayer.h" />
+    <ClInclude Include="include\ui\factory\SFControlFactory.h" />
+    <ClInclude Include="include\ui\factory\SFControlFactoryExtension.h" />
+    <ClInclude Include="include\ui\factory\SFControlFactoryManager.h" />
+    <ClInclude Include="include\ui\SFUIFactory.h" />
+    <ClInclude Include="include\ui\utils\ThirdTool.h" />
+    <ClInclude Include="include\ui\utils\VisibleRect.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sofia\ui\control\SFBaseControl.cpp" />
+    <ClCompile Include="sofia\ui\control\SFCheckBox.cpp" />
+    <ClCompile Include="sofia\ui\control\SFControlSlider.cpp" />
+    <ClCompile Include="sofia\ui\control\SFGraySprite.cpp" />
+    <ClCompile Include="sofia\ui\control\SFGridBox.cpp" />
+    <ClCompile Include="sofia\ui\control\SFJoyRocker.cpp" />
+    <ClCompile Include="sofia\ui\control\SFLabel.cpp" />
+    <ClCompile Include="sofia\ui\control\SFLabelTex.cpp" />
+    <ClCompile Include="sofia\ui\control\SFProgressBar.cpp" />
+    <ClCompile Include="sofia\ui\control\SFRichBox.cpp" />
+    <ClCompile Include="sofia\ui\control\SFRichLabel.cpp" />
+    <ClCompile Include="sofia\ui\control\SFScale9Sprite.cpp" />
+    <ClCompile Include="sofia\ui\control\SFScrollView.cpp" />
+    <ClCompile Include="sofia\ui\control\SFSharedFontManager.cpp" />
+    <ClCompile Include="sofia\ui\control\SFTableView.cpp" />
+    <ClCompile Include="sofia\ui\control\SFTabView.cpp" />
+    <ClCompile Include="sofia\ui\control\SFTabViewControl.cpp" />
+    <ClCompile Include="sofia\ui\control\SFTouchLayer.cpp" />
+    <ClCompile Include="sofia\ui\factory\SFControlFactory.cpp" />
+    <ClCompile Include="sofia\ui\factory\SFControlFactoryExtension.cpp" />
+    <ClCompile Include="sofia\ui\factory\SFControlFactoryManager.cpp" />
+    <ClCompile Include="sofia\ui\SFUIFactory.cpp" />
+    <ClCompile Include="sofia\ui\utils\ThirdTool.cpp" />
+    <ClCompile Include="sofia\ui\utils\VisibleRect.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

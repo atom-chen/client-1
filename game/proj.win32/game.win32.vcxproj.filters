@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{e660c817-d0d3-4237-bc5d-a23810490e3a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{5fd14369-acdf-4552-b359-e6853b1bf0ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="proj.win32">
+      <UniqueIdentifier>{68e0ffc7-b6b5-4491-8286-d850a2c01237}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>proj.win32</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>proj.win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SFGameApp.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>proj.win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SFGameApp.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\cocos2dx\proj.win32\cocos2d.vcxproj.filters" />
+  </ItemGroup>
+</Project>

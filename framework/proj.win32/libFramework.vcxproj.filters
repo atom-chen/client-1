@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="sofia">
+      <UniqueIdentifier>{c0be8946-d3ac-4b87-8aa4-8cf61da8c253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\core">
+      <UniqueIdentifier>{d7324c06-c370-4adc-a7ae-d8f7f65599e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\map">
+      <UniqueIdentifier>{a876fde9-1dab-4ae0-bf00-afb21d03c4df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\resouce">
+      <UniqueIdentifier>{aff19fb1-4dd3-47cd-b852-730aaff157cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\utils">
+      <UniqueIdentifier>{31e2181d-af0a-4a9f-8c72-d0156c7cf3d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{25842e26-516e-48fa-b748-ba13d23f8696}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\scene">
+      <UniqueIdentifier>{de3f9270-8f30-424e-8025-1884f50ec8b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\base">
+      <UniqueIdentifier>{cd11782b-c6ad-476f-bb1e-00767f7a883a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\package">
+      <UniqueIdentifier>{950c6200-1987-4347-913a-5d2eb88e0577}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\net">
+      <UniqueIdentifier>{46c4b845-7f9c-4481-b7df-e66c5c18a4de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\stream">
+      <UniqueIdentifier>{9eec208c-e1fa-43f1-acb2-98a196ad7232}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\core">
+      <UniqueIdentifier>{9f53d321-22af-4a83-8a96-286f693fcc73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\download">
+      <UniqueIdentifier>{47fd03be-33d6-4bff-83f4-a8b92258d643}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\eventset">
+      <UniqueIdentifier>{cd30d08e-423c-4553-8b77-f7860fef2dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\map">
+      <UniqueIdentifier>{7fb751a8-cc44-4c96-80dd-269ef0970a58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\net">
+      <UniqueIdentifier>{c756c6cd-e574-46a6-892b-1f9d914c8140}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\stream">
+      <UniqueIdentifier>{43479089-2758-4c96-833e-528861f42dc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\utils">
+      <UniqueIdentifier>{f6f5d50f-2509-4b3b-9d9d-6555515900b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\base">
+      <UniqueIdentifier>{b6a1fb16-f12e-4187-a1f5-2e62c85b5ecc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\package">
+      <UniqueIdentifier>{f3baf3fd-c69d-41bd-bfd0-eb5ed0eb9638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\resource">
+      <UniqueIdentifier>{c0049815-1610-40f8-92e4-c6dbb3018b3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\resource\loader">
+      <UniqueIdentifier>{16a3f361-b270-4289-9639-6d5a97e4ff37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\scene">
+      <UniqueIdentifier>{b9574c79-4f1e-41dd-a17b-2e806ebea645}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\eventset">
+      <UniqueIdentifier>{a46190b9-c854-413a-a43c-65e3d101c56c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\download">
+      <UniqueIdentifier>{20e176db-1242-4a9c-aed2-f43d7300d427}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sofia\utils\HTTPHandler">
+      <UniqueIdentifier>{57844c8b-8b42-4cc5-ad49-fb8c985419bd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\sofia\map\SFMap.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\SFMapService.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\resouce\GameResource.cpp">
+      <Filter>sofia\resouce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\SFGeometry.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\SFPriorityNotificationCenter.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\scene\SFGamePresenter.cpp">
+      <Filter>sofia\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\scene\SFGameScene.cpp">
+      <Filter>sofia\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\scene\SFGameSceneMgr.cpp">
+      <Filter>sofia\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\SFTimeAxis.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\SFSimulator.cpp">
+      <Filter>sofia</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\base\SFApp.cpp">
+      <Filter>sofia\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\SFLabelTTF.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\SFStringUtil.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\CsvFile.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\MapResouceManager.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\SFTouchDispatcher.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\ThreadScheduler.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\core\RenderScene.cpp">
+      <Filter>sofia\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\core\RenderSceneLayer.cpp">
+      <Filter>sofia\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\core\RenderSprite.cpp">
+      <Filter>sofia\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\core\RpgSprite.cpp">
+      <Filter>sofia\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\Background.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\ccShaders.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\CellGroup.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\ElemGroup.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\ExternStack.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\Layer.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\LogicBlock.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\LogicFinder.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\LogicPath.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\Map.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\Mask.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\MetaLayer.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\MiddleRenderLayer.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\RenderCocos.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\RenderCommon.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\RenderInterface.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\SpriteMove.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\map\StructCommon.cpp">
+      <Filter>sofia\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\net\NetSystem.cpp">
+      <Filter>sofia\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\net\Network.cpp">
+      <Filter>sofia\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\net\SFSocketCommService.cpp">
+      <Filter>sofia\net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\stream\BinaryReader.cpp">
+      <Filter>sofia\stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\stream\BinaryReaderNet.cpp">
+      <Filter>sofia\stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\stream\BinaryWriter.cpp">
+      <Filter>sofia\stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\stream\BinaryWriterNet.cpp">
+      <Filter>sofia\stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\stream\MemoryStream.cpp">
+      <Filter>sofia\stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\CommonUtility.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\SFExecutionThreadService.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\sqlite3.c">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\StateBlock.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\eventset\Event.cpp">
+      <Filter>sofia\eventset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\eventset\EventArgs.cpp">
+      <Filter>sofia\eventset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\eventset\EventSet.cpp">
+      <Filter>sofia\eventset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\eventset\SubscriberSlot.cpp">
+      <Filter>sofia\eventset</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\download\BackgroundDownloadTask.cpp">
+      <Filter>sofia\download</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\StreamDataAdapter.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\HttpTools.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\resouce\SFResourceLoad.cpp">
+      <Filter>sofia\resouce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\resouce\SFLoadResourceModule.cpp">
+      <Filter>sofia\resouce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\package\SFPackageManager.cpp">
+      <Filter>sofia\package</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\SFMiniHtml.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\CCStrConv.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\CCStrUtil.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\core\SFRenderSprite.cpp">
+      <Filter>sofia\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\resouce\SFModelResConfig.cpp">
+      <Filter>sofia\resouce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\MessageFactory.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\package\SFPackageUpdateMgr.cpp">
+      <Filter>sofia\package</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\download\SFDownload.cpp">
+      <Filter>sofia\download</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\md5.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\SFEasyMail.cpp">
+      <Filter>sofia\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sofia\utils\HTTPHandler\Base64Code.cpp">
+      <Filter>sofia\utils\HTTPHandler</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\sofia\utils\SFLog.h">
+      <Filter>sofia\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\utils\SFArray.h">
+      <Filter>sofia\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\utils\SFLabelTTF.h">
+      <Filter>sofia\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\SofiaMacro.h">
+      <Filter>sofia</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia.h" />
+    <ClInclude Include="..\sofia\utils\ThreadScheduler.h">
+      <Filter>sofia\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\RenderScene.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\RenderSceneLayer.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\RenderSprite.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\RpgSprite.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\eventset\Event.h">
+      <Filter>include\eventset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\eventset\EventArgs.h">
+      <Filter>include\eventset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\eventset\EventSet.h">
+      <Filter>include\eventset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\eventset\SubscriberSlot.h">
+      <Filter>include\eventset</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\Background.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\CellGroup.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\ElemGroup.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\Layer.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\LogicBlock.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\LogicFinder.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\LogicPath.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\Map.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\MapDefine.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\MapLoadingInterface.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\Mask.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\MetaLayer.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\MiddleRenderLayer.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\RenderCocos.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\RenderCommon.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\RenderInterface.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\SpriteMove.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\StructCommon.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\net\NetSystem.h">
+      <Filter>include\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\net\Network.h">
+      <Filter>include\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\stream\BinaryReader.h">
+      <Filter>include\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\stream\BinaryReaderNet.h">
+      <Filter>include\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\stream\BinaryWriter.h">
+      <Filter>include\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\stream\BinaryWriterNet.h">
+      <Filter>include\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\stream\iStream.h">
+      <Filter>include\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\stream\MemoryStream.h">
+      <Filter>include\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFExecutionThreadService.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFThread.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\Singleton.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\sqlite3.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\map\ccShader_PositionTextureAlpha_frag.h">
+      <Filter>sofia\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\map\ccShader_PositionTextureAlpha_vert.h">
+      <Filter>sofia\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\map\ccShaders.h">
+      <Filter>sofia\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\base\SFApp.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\ActionEventBase.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\resource\EntityData.h">
+      <Filter>include\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\resource\GameResource.h">
+      <Filter>include\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\resource\loader\PropertySymbolQuary.h">
+      <Filter>include\resource\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\scene\SFGamePresenter.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\scene\SFGameScene.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\scene\SFGameSceneMgr.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\map\ShaderMacro.h">
+      <Filter>sofia\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\utils\CommonUtility.h">
+      <Filter>sofia\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\utils\StateBlock.h">
+      <Filter>sofia\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\download\BackgroundDownloadTask.h">
+      <Filter>sofia\download</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\ExternStack.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\MapResouceManager.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\SFMap.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\SFMapDef.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\SFMapService.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\StreamDataAdapter.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\CsvFile.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFTouchDispatcher.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SFSimulator.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFPriorityNotificationCenter.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\resource\SFLoadResourceModule.h">
+      <Filter>include\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\resource\SFResourceLoad.h">
+      <Filter>include\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\HttpTools.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\package\SFPackageManager.h">
+      <Filter>include\package</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\SFRenderSprite.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\resource\SFModelResConfig.h">
+      <Filter>include\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\CCStrConv.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\CCStrUtil.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFMiniHtml.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFStringUtil.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\utils\MessageFactory.h">
+      <Filter>sofia\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\net\SFSocketCommService.h">
+      <Filter>sofia\net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\heap.h">
+      <Filter>sofia\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\package\SFPackageUpdateMgr.h">
+      <Filter>include\package</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\map\SFRenderInterface.h">
+      <Filter>include\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\download\SFDownload.h">
+      <Filter>include\download</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\utils\md5.h">
+      <Filter>sofia\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\utils\SFEasyMail.h">
+      <Filter>include\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sofia\utils\HTTPHandler\Base64Code.h">
+      <Filter>sofia\utils\HTTPHandler</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

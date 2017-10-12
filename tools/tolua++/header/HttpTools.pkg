@@ -1,0 +1,20 @@
+
+enum
+{
+	kTypePost,
+	kTypeGet,
+};
+class HttpTools : public CCObject
+{
+
+	static HttpTools* getInstance();
+
+	void send(const char* url,int  type, const char* tag,const char* userData,int len);
+
+	void requestCallBack(CCObject *sender, void *data );
+
+	void registLuaCallBack(LUA_FUNCTION nhandler);
+	HttpTools();
+	~HttpTools();
+};
+

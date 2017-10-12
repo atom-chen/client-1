@@ -1,0 +1,26 @@
+
+class StreamDataAdapter
+{
+	static void WriteChar(iBinaryWriter* writer, signed char value);
+	static void WriteUChar(iBinaryWriter* writer, unsigned char value);
+	static void WriteShort(iBinaryWriter* writer, signed short value);
+	static void WriteUShort(iBinaryWriter* writer, unsigned short value);
+	static void WriteInt(iBinaryWriter* writer, signed int value);
+	static void WriteUInt(iBinaryWriter* writer, unsigned int value);
+	static void WriteFloat(iBinaryWriter* writer, float value);
+	static void WriteLLong(iBinaryWriter* writer, signed long long value);
+	static void WriteULLong(iBinaryWriter* writer, unsigned long long value);
+	static void WriteStr(iBinaryWriter* writer, const char* value);
+
+	static signed char			ReadChar(iBinaryReader* reader);
+	static unsigned char		ReadUChar(iBinaryReader* reader);
+	static signed short			ReadShort(iBinaryReader* reader);
+	static unsigned short		ReadUShort(iBinaryReader* reader);
+	static signed int				ReadInt(iBinaryReader* reader);
+	static unsigned int			ReadUInt(iBinaryReader* reader);
+	static float				ReadFloat(iBinaryReader* reader);
+	static char*			ReadStr(iBinaryReader* reader);
+	static signed long long		ReadLLong(iBinaryReader* reader);
+	static unsigned long long	ReadULLong(iBinaryReader* reader);
+};
+

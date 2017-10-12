@@ -1,0 +1,367 @@
+﻿#include "map/RenderInterface.h"
+#include "map/MetaLayer.h"
+#include "map/Background.h"
+#include "map/Map.h"
+#include "map/MapLoadingInterface.h"
+#include "map/MapDefine.h"
+#include "stream/BinaryWriterNet.h"
+#include "stream/BinaryReaderNet.h"
+#include "map/Mask.h"
+#include "resource/SFResourceLoad.h"
+#include "map/ElemGroup.h"
+#include "map/SFMapService.h"
+namespace cmap
+{
+	Map::Map()
+		: m_map_loadingEvent(NULL)
+	{
+		this->mapW = 0;
+		this->mapH = 0;
+		this->viewCenterX = 0;
+		this->viewCenterY = 0;
+		this->viewSizeWHalf = 0;
+		this->viewSizeHHalf = 0;
+		m_LoadModule = new SFLoadTextureModule();
+		SFResourceLoad::sharedResourceLoadCache()->addLoadingModule(m_LoadModule);
+
+		m_pMask = new Mask;
+
+		m_sap_listener.Init(this);
+		m_sap = NULL;
+	}
+
+	Map::~Map()
+	{
+		DelAllLayers();
+		CC_SAFE_DELETE( m_pMask );
+		SFResourceLoad::sharedResourceLoadCache()->removeLoadingModule(m_LoadModule);
+	}
+
+	void Map::SetViewCenter( unsigned int x, unsigned int y )
+	{
+		if (this->viewCenterX == x && this->viewCenterY == y)
+		{
+			return;
+		}
+
+		x = MAX(MIN(x, this->mapW-viewSizeWHalf), viewSizeWHalf);
+		y = MAX(MIN(y, this->mapH-viewSizeHHalf), viewSizeHHalf);
+
+		this->viewCenterX = x;
+		this->viewCenterY = y;
+	
+		if(m_sap)
+		{
+			kmVec3 object_center;
+			kmVec3 object_size;
+			kmVec3Fill(&object_center, this->viewCenterX+64, this->viewCenterY+32, 0);
+			kmVec3Fill(&object_size, this->viewSizeWHalf+64, this->viewSizeHHalf+64, 0);
+
+			kmAABB aabb;
+			kmAABBZero(&aabb);
+			kmVec3Subtract(&aabb.min, &object_center, &object_size);
+			kmVec3Add(&aabb.max, &object_center, &object_size);
+			m_sap->UpdateObject(m_cameraBoxHandle, aabb);
+			//m_sap->DumpPairs();
+		}
+	}
+
+	int Map::GetViewCenterX() const
+	{
+		return this->viewCenterX;
+	}
+
+	int Map::GetViewCenterY() const
+	{
+		return this->viewCenterY;
+	}
+
+	unsigned int Map::GetViewBeginX() const
+	{
+		return this->viewCenterX - this->viewSizeWHalf;
+	}
+
+	unsigned int Map::GetViewBeginY() const
+	{
+		return this->viewCenterY - this->viewSizeHHalf;
+	}
+
+	void Map::SetViewSize( unsigned int w, unsigned int h )
+	{
+		this->viewSizeHHalf = h/2;
+		this->viewSizeWHalf = w/2;
+	}
+
+	unsigned int Map::GetViewSizeW() const
+	{
+		return this->viewSizeWHalf*2;
+	}
+
+	unsigned int Map::GetViewSizeH() const
+	{
+		return this->viewSizeHHalf*2;
+	}
+
+	void Map::SetMapSize( unsigned int tileColNum, unsigned int tileRowNum, unsigned int tileWidth, unsigned int tileHeight )
+	{
+		this->mapW = tileColNum * tileWidth;
+		this->mapH = tileRowNum * tileHeight;
+	}
+
+	unsigned int Map::GetMapWidth() const
+	{
+		return this->mapW;
+	}
+
+	unsigned int Map::GetMapHeight() const
+	{
+		return this->mapH;
+	}
+
+	void Map::Render()
+	{
+		if(m_sap)
+			m_sap->DumpPairs();
+	}
+
+	void Map::SetMapLoadingEvent( IMapLoadingCompleteEvent *callbackEvent )
+	{
+		m_map_loadingEvent = callbackEvent;
+	}
+
+	void Map::onLoadCompleted()
+	{
+		if(m_map_loadingEvent)
+			m_map_loadingEvent->onMapLoadCompleted();
+	}
+
+	void Map::OnMapDataLoaded()
+	{
+		SFResourceLoad::sharedResourceLoadCache()->setCompleteEventOnce(this);
+	}
+
+	Layer* Map::AddTileLayer(int index, int tileWidth, int tileHeight)
+	{
+		if(index < 0 || index > mLayers.size())
+		{
+			index = mLayers.size();
+		}
+
+		Background* back = new Background();
+
+		AddLayer(back, index);
+		back->m_sap = this->m_sap;
+
+		m_LoadModule->clearObject();
+		back->setResourceLoadHandle(m_LoadModule);
+
+		return back;
+	}
+
+	Layer* Map::AddAdornmentLayer(int index)
+	{
+		if(index < 0 || index > mLayers.size())
+		{
+			index = mLayers.size();
+		}
+
+		ElemGroup* back = new ElemGroup();
+		back->m_sap = this->m_sap;
+		AddLayer(back, index);
+		return back;
+	}
+
+	Layer* Map::AddMetaLayer(int index, int tileWidth, int tileHeight)
+	{
+		if(index < 0 || index > mLayers.size())
+		{
+			index = mLayers.size();
+		}
+
+		MetaLayer* back = new MetaLayer();
+
+#if DRAW_META_LAYER
+		int createLayerNum = back->CreateShow(mLayerNum);
+		mLayerNum += createLayerNum;
+#endif
+
+		return back;
+	}
+
+	void Map::DelAllLayers()
+	{
+		for(int i = 0; i < mLayers.size(); i++)
+		{
+			mLayers[i]->removeFromParent();
+			delete mLayers[i];
+		}
+		mLayers.clear();
+		std::map<cocos2d::CCNode*, renderElem*>::iterator object_itr = m_object_map.begin();
+		object_itr = m_object_map.begin();
+		while(object_itr != m_object_map.end())
+		{
+			// 将自身删掉
+			//CC_SAFE_RELEASE_NULL(object_itr->second->pSpr);
+			delete (object_itr->second);
+			object_itr->second = 0;
+			object_itr++;
+		}
+		m_object_map.clear();
+		CC_SAFE_DELETE(m_sap);
+		m_sap = new ArraySAP;
+		m_sap->SetCommonListner(&m_sap_listener);
+		kmAABB camerabox;
+		kmAABBZero(&camerabox);
+		m_cameraBoxHandle = m_sap->AddObject(this, camerabox, SF_SAP_MAP_CAMARE, SF_SAP_MAP_TILE);
+	}
+
+	void Map::AddLayer( cmap::Layer* layer, int index)
+	{
+		LayerVector::iterator iter = mLayers.begin() + index;
+		mLayers.insert(iter, layer);
+	}
+
+	Mask* Map::GetMask()
+	{
+		return m_pMask;
+	}
+
+	bool Map::IsMaskPoint( int cellx, int celly )
+	{
+		return m_pMask->IsMask(cellx, celly);
+	}
+
+	bool Map::LoadHeader( cocos2d::iStream& stream )
+	{
+		cocos2d::BinaryReaderNet reader;
+		reader.SetStream(&stream, false);
+		if (!reader.Open())
+		{
+			return false;
+		}
+		MapFileHeader fileHeader;
+		MapInfoHeader infoHeader;
+		memset(&fileHeader, 0, sizeof(fileHeader));
+		memset(&infoHeader, 0, sizeof(infoHeader));
+		reader.ReadRawData(&fileHeader, sizeof(fileHeader));
+			
+		if ( 0 != strcmp(fileHeader.fileExt, "SMCF") )
+		{
+			return false;
+		}
+		fileHeader.version;
+		reader.ReadRawData(&infoHeader, sizeof(infoHeader));
+
+		this->name = infoHeader.mapName;
+		this->SetName(infoHeader.mapName);
+		this->SetMapSize(infoHeader.colNum, infoHeader.rowNum, infoHeader.cellWidth, infoHeader.cellHeight);
+		return true;
+	}
+
+	bool Map::addSprite( cocos2d::CCNode* renderSpr, int layer )
+	{
+		renderElem* re = new renderElem;
+		re->type = ET_PlayerObject;
+		renderSpr->setVisible(false);
+		renderSpr->setTag(layer);
+		re->parent = renderSpr;
+
+ 		kmVec3 object_size;
+		kmAABB tilebox;
+		kmAABBZero(&tilebox);
+ 
+ 		kmVec3Fill(&tilebox.min, renderSpr->getPositionX(), renderSpr->getPositionY(), 0);
+ 		kmVec3Fill(&object_size, 32, 64, 0);
+ 
+ 		kmVec3Add(&tilebox.max, &tilebox.min, &object_size);
+ 
+ 		re->sap_handle = m_sap->AddObject(re, tilebox, SF_SAP_MAP_TILE, SF_SAP_MAP_CAMARE);
+		m_object_map.insert(std::pair<cocos2d::CCNode*, renderElem*>(renderSpr, re));
+		//m_sap->DumpPairs();
+		return true;
+	}
+
+
+	ArraySAP* Map::getSap()
+	{
+		return m_sap;
+	}
+
+	bool Map::removeSprite( cocos2d::CCNode* renderSpr )
+	{
+		std::map<cocos2d::CCNode*, renderElem*>::iterator iter = m_object_map.find(renderSpr);
+		if (iter != m_object_map.end())
+		{
+			m_sap->RemoveObject(iter->second->sap_handle);
+			//m_sap->DumpPairs();
+			delete (iter->second);
+			m_object_map.erase(iter);
+			return true;
+		}
+		return false;
+	}
+
+	void Map::updateSprite( cocos2d::CCNode* renderSpr )
+	{
+		std::map<cocos2d::CCNode*, renderElem*>::iterator iter = m_object_map.find(renderSpr);
+		if (iter != m_object_map.end())
+		{
+			kmVec3 object_size;
+			kmAABB tilebox;
+			kmAABBZero(&tilebox);
+
+			kmVec3Fill(&tilebox.min, renderSpr->getPositionX(), renderSpr->getPositionY(), 0);
+			kmVec3Fill(&object_size, 32, 64, 0);
+
+			kmVec3Add(&tilebox.max, &tilebox.min, &object_size);
+			m_sap->UpdateObject(iter->second->sap_handle,tilebox);
+		}
+	}
+
+	Map::mapObjSAPListener::mapObjSAPListener()
+		:m_terrian_instance(NULL)
+	{
+
+	}
+
+	Map::mapObjSAPListener::~mapObjSAPListener()
+	{
+
+	}
+
+	void Map::mapObjSAPListener::Init( Map *terrian_instance )
+	{
+
+	}
+
+	void* Map::mapObjSAPListener::OnPairCreate( const void *object0, const void *object1 )
+	{
+		renderElem* ae = (renderElem*)object1;
+		if( ae->type == ET_PlayerObject)
+		{
+			ae->parent->setVisible(true);
+			//SFMapService::getInstancePtr()->getShareMap()->EnterMap(ae->parent, (eRenderLayerTag)ae->parent->getTag());
+		}
+		else
+			((Background*)ae->parent)->BuildAdornmentRenderInfo(ae);
+		return NULL;
+	}
+
+	void Map::mapObjSAPListener::OnPairDelete( const void *object0, const void *object1, void *pPairData )
+	{
+		renderElem* ae = (renderElem*)object1;
+		if( ae->type == ET_PlayerObject)
+		{
+			ae->parent->setVisible(false);
+			//SFMapService::getInstancePtr()->getShareMap()->LeaveMap(ae->parent);
+		}
+		else
+			((Background*)ae->parent)->ClearAdornmentRenderInfo(ae);
+	}
+
+	void Map::mapObjSAPListener::OnQueryObject( const void *object0 )
+	{
+
+	}
+
+}

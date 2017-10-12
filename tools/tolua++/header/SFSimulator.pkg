@@ -1,0 +1,65 @@
+
+
+
+class SFCommunicationListener
+{
+
+	virtual void handleRecv(ActionEventBase* recvEvent) = 0;
+};
+
+class SFTcpConnectionListener
+{
+
+	virtual void handleConnected(ActionEventBase *conEvent) = 0;
+	virtual void handleDisconnected(ActionEventBase *closeEvent) = 0;
+};
+
+class SFHttpResponseListener
+{
+
+	virtual void handleHttpResponse(int httpState, const char* requestTag, const char* responseData) = 0;
+};
+
+
+
+class SFGameSimulator : public CCObject
+{
+
+	SFGameSimulator(void);
+	~SFGameSimulator(void);
+
+
+	static SFGameSimulator* sharedGameSimulator();
+	void purgeGameSimulator();
+
+	CCScene* getPresenterScene();
+	SFGamePresenter*     getGamePresenter();
+	iBinaryWriter * getBinaryWriter(int eventId);
+	void setCommunicationListener(SFCommunicationListener *pListener);
+	void setHttpResponseListener(SFHttpResponseListener* pListener);
+	void tick();
+
+	// tcp network
+
+	void setTpcConnectionHandler(LUA_FUNCTION nHandler);	// lua的回调
+
+	void enableTcpCommService();//创建tcp服务
+	void setTcpConnectionListener(SFTcpConnectionListener* connectListener);//设置监听
+	void tcpConnect(std::string ip, int port,LUA_FUNCTION nHandler);
+	void tcpDisConnect();//断开链接
+	bool isTcpConnect();//是否在链接
+	
+	bool onTcpConnect(const cocos2d::EventArgs& arg);
+	bool onTcpRecv(const cocos2d::EventArgs& arg);
+	bool onTcpClose(const cocos2d::EventArgs& arg);
+
+
+	void onRecvGameEvent(ActionEventBase *event);
+	void sendTcpActionEvent(ActionEventBase *event);
+	void sendTcpActionEventInLua(iBinaryWriter * writer);
+
+	void sendGetHttpRequest(const char* strUrl, const char* requestTag, const char* backupUrl = NULL);
+	void sendPostHttpReuqest(const char* strUrl, const char* strData, int dataLen, const char* requestTag, const char* backupUrl = NULL);
+
+
+};

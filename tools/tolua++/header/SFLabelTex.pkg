@@ -1,0 +1,44 @@
+
+
+class SFLabelTex : public CCSprite
+{
+
+public:
+	SFLabelTex();
+	virtual ~SFLabelTex();
+	bool initWithString(const char* str,const char* fontName,float size);
+	bool initWithString(const char* str, const char* fontName, float fontSize,
+		const CCSize& dimensions, CCTextAlignment hAlignment);
+	bool initWithString(const char* str, const char* fontName, float fontSize,
+		const CCSize& dimensions, CCTextAlignment hAlignment,CCVerticalTextAlignment vAlignment);
+	static SFLabelTex* create();
+	static SFLabelTex* create(const char* str, const char* fontName, float fontSize);
+	static SFLabelTex* create(const char* str, const char* fontName, float fontSize,CCSize dimensions);
+	static SFLabelTex* create(const char* str, const char* fontName, float fontSize,
+		const CCSize& dimensions, CCTextAlignment hAlignment);
+	static SFLabelTex* create(const char* str, const char* fontName, float fontSize,
+		const CCSize& dimensions, CCTextAlignment hAlignment, 
+		CCVerticalTextAlignment vAlignment);
+
+	void setFontFillColor(const ccColor3B &tintColor, bool mustUpdateTexture = true);
+	ccColor3B getFontFillColor();
+	void setColor(const ccColor3B& color3);
+	void setString(const char* label);
+	const char* getString(void);
+
+	CCTextAlignment getHorizontalAlignment();
+	void setHorizontalAlignment(CCTextAlignment alignment);
+
+	CCVerticalTextAlignment getVerticalAlignment();
+	void setVerticalAlignment(CCVerticalTextAlignment verticalAlignment);
+
+	CCSize getDimensions();
+	void setDimensions(const CCSize &dim);
+
+	float getFontSize();
+	void setFontSize(float fontSize);
+
+	const char* getFontName();
+	void setFontName(const char* fontName);
+};
+

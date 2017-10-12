@@ -1,0 +1,22 @@
+
+
+
+class SFRichBox : public SFBaseControl
+{
+
+	SFRichBox();
+	virtual ~SFRichBox();
+
+	static SFRichBox* create();
+	void appendFormatText(const char* pText);
+
+	void clearAll();
+
+	void setClickHandle(CCObject* object, SFRichBoxCallback callback);
+
+ virtual CCSize getDimensions(void);
+ virtual void setDimensions(CCSize var);
+
+};
+
+

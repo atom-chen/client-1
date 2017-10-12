@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="editor_debug|Win32">
+      <Configuration>editor_debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="editor_release|Win32">
+      <Configuration>editor_release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\sofia\base\SFApp.cpp" />
+    <ClCompile Include="..\sofia\core\RenderScene.cpp" />
+    <ClCompile Include="..\sofia\core\RenderSceneLayer.cpp" />
+    <ClCompile Include="..\sofia\core\RenderSprite.cpp" />
+    <ClCompile Include="..\sofia\core\RpgSprite.cpp" />
+    <ClCompile Include="..\sofia\core\SFRenderSprite.cpp" />
+    <ClCompile Include="..\sofia\download\BackgroundDownloadTask.cpp" />
+    <ClCompile Include="..\sofia\download\SFDownload.cpp" />
+    <ClCompile Include="..\sofia\eventset\Event.cpp" />
+    <ClCompile Include="..\sofia\eventset\EventArgs.cpp" />
+    <ClCompile Include="..\sofia\eventset\EventSet.cpp" />
+    <ClCompile Include="..\sofia\eventset\SubscriberSlot.cpp" />
+    <ClCompile Include="..\sofia\map\Background.cpp" />
+    <ClCompile Include="..\sofia\map\ccShaders.cpp" />
+    <ClCompile Include="..\sofia\map\CellGroup.cpp" />
+    <ClCompile Include="..\sofia\map\ElemGroup.cpp" />
+    <ClCompile Include="..\sofia\map\ExternStack.cpp" />
+    <ClCompile Include="..\sofia\map\Layer.cpp" />
+    <ClCompile Include="..\sofia\map\LogicBlock.cpp" />
+    <ClCompile Include="..\sofia\map\LogicFinder.cpp" />
+    <ClCompile Include="..\sofia\map\LogicPath.cpp" />
+    <ClCompile Include="..\sofia\map\Map.cpp" />
+    <ClCompile Include="..\sofia\map\MapResouceManager.cpp" />
+    <ClCompile Include="..\sofia\map\Mask.cpp" />
+    <ClCompile Include="..\sofia\map\MetaLayer.cpp" />
+    <ClCompile Include="..\sofia\map\MiddleRenderLayer.cpp" />
+    <ClCompile Include="..\sofia\map\RenderCocos.cpp" />
+    <ClCompile Include="..\sofia\map\RenderCommon.cpp" />
+    <ClCompile Include="..\sofia\map\RenderInterface.cpp" />
+    <ClCompile Include="..\sofia\map\SFMap.cpp" />
+    <ClCompile Include="..\sofia\map\SFMapService.cpp" />
+    <ClCompile Include="..\sofia\map\SpriteMove.cpp" />
+    <ClCompile Include="..\sofia\map\StructCommon.cpp" />
+    <ClCompile Include="..\sofia\net\NetSystem.cpp" />
+    <ClCompile Include="..\sofia\net\Network.cpp" />
+    <ClCompile Include="..\sofia\net\SFSocketCommService.cpp" />
+    <ClCompile Include="..\sofia\package\SFPackageManager.cpp" />
+    <ClCompile Include="..\sofia\package\SFPackageUpdateMgr.cpp" />
+    <ClCompile Include="..\sofia\resouce\SFLoadResourceModule.cpp" />
+    <ClCompile Include="..\sofia\resouce\SFModelResConfig.cpp" />
+    <ClCompile Include="..\sofia\resouce\SFResourceLoad.cpp" />
+    <ClCompile Include="..\sofia\SFSimulator.cpp" />
+    <ClCompile Include="..\sofia\resouce\GameResource.cpp" />
+    <ClCompile Include="..\sofia\scene\SFGamePresenter.cpp" />
+    <ClCompile Include="..\sofia\scene\SFGameScene.cpp" />
+    <ClCompile Include="..\sofia\scene\SFGameSceneMgr.cpp" />
+    <ClCompile Include="..\sofia\stream\BinaryReader.cpp" />
+    <ClCompile Include="..\sofia\stream\BinaryReaderNet.cpp" />
+    <ClCompile Include="..\sofia\stream\BinaryWriter.cpp" />
+    <ClCompile Include="..\sofia\stream\BinaryWriterNet.cpp" />
+    <ClCompile Include="..\sofia\stream\MemoryStream.cpp" />
+    <ClCompile Include="..\sofia\utils\CCStrConv.cpp" />
+    <ClCompile Include="..\sofia\utils\CCStrUtil.cpp" />
+    <ClCompile Include="..\sofia\utils\CommonUtility.cpp" />
+    <ClCompile Include="..\sofia\utils\CsvFile.cpp" />
+    <ClCompile Include="..\sofia\utils\HTTPHandler\Base64Code.cpp" />
+    <ClCompile Include="..\sofia\utils\HttpTools.cpp" />
+    <ClCompile Include="..\sofia\utils\md5.cpp" />
+    <ClCompile Include="..\sofia\utils\MessageFactory.cpp" />
+    <ClCompile Include="..\sofia\utils\SFEasyMail.cpp" />
+    <ClCompile Include="..\sofia\utils\SFExecutionThreadService.cpp" />
+    <ClCompile Include="..\sofia\utils\SFLabelTTF.cpp" />
+    <ClCompile Include="..\sofia\utils\SFMiniHtml.cpp" />
+    <ClCompile Include="..\sofia\utils\SFStringUtil.cpp" />
+    <ClCompile Include="..\sofia\utils\SFTimeAxis.cpp" />
+    <ClCompile Include="..\sofia\utils\SFGeometry.cpp" />
+    <ClCompile Include="..\sofia\utils\SFPriorityNotificationCenter.cpp" />
+    <ClCompile Include="..\sofia\utils\SFTouchDispatcher.cpp" />
+    <ClCompile Include="..\sofia\utils\sqlite3.c" />
+    <ClCompile Include="..\sofia\utils\StateBlock.cpp" />
+    <ClCompile Include="..\sofia\utils\StreamDataAdapter.cpp" />
+    <ClCompile Include="..\sofia\utils\ThreadScheduler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\base\SFApp.h" />
+    <ClInclude Include="..\include\core\ActionEventBase.h" />
+    <ClInclude Include="..\include\core\RenderScene.h" />
+    <ClInclude Include="..\include\core\RenderSceneLayer.h" />
+    <ClInclude Include="..\include\core\RenderSprite.h" />
+    <ClInclude Include="..\include\core\RpgSprite.h" />
+    <ClInclude Include="..\include\core\SFRenderSprite.h" />
+    <ClInclude Include="..\include\download\SFDownload.h" />
+    <ClInclude Include="..\include\eventset\Event.h" />
+    <ClInclude Include="..\include\eventset\EventArgs.h" />
+    <ClInclude Include="..\include\eventset\EventSet.h" />
+    <ClInclude Include="..\include\eventset\SubscriberSlot.h" />
+    <ClInclude Include="..\include\map\Background.h" />
+    <ClInclude Include="..\include\map\CellGroup.h" />
+    <ClInclude Include="..\include\map\ElemGroup.h" />
+    <ClInclude Include="..\include\map\ExternStack.h" />
+    <ClInclude Include="..\include\map\Layer.h" />
+    <ClInclude Include="..\include\map\LogicBlock.h" />
+    <ClInclude Include="..\include\map\LogicFinder.h" />
+    <ClInclude Include="..\include\map\LogicPath.h" />
+    <ClInclude Include="..\include\map\Map.h" />
+    <ClInclude Include="..\include\map\MapDefine.h" />
+    <ClInclude Include="..\include\map\MapLoadingInterface.h" />
+    <ClInclude Include="..\include\map\MapResouceManager.h" />
+    <ClInclude Include="..\include\map\Mask.h" />
+    <ClInclude Include="..\include\map\MetaLayer.h" />
+    <ClInclude Include="..\include\map\MiddleRenderLayer.h" />
+    <ClInclude Include="..\include\map\RenderCocos.h" />
+    <ClInclude Include="..\include\map\RenderCommon.h" />
+    <ClInclude Include="..\include\map\RenderInterface.h" />
+    <ClInclude Include="..\include\map\SFMap.h" />
+    <ClInclude Include="..\include\map\SFMapDef.h" />
+    <ClInclude Include="..\include\map\SFMapService.h" />
+    <ClInclude Include="..\include\map\SFRenderInterface.h" />
+    <ClInclude Include="..\include\map\SpriteMove.h" />
+    <ClInclude Include="..\include\map\StructCommon.h" />
+    <ClInclude Include="..\include\net\NetSystem.h" />
+    <ClInclude Include="..\include\net\Network.h" />
+    <ClInclude Include="..\include\package\SFPackageManager.h" />
+    <ClInclude Include="..\include\package\SFPackageUpdateMgr.h" />
+    <ClInclude Include="..\include\resource\EntityData.h" />
+    <ClInclude Include="..\include\resource\GameResource.h" />
+    <ClInclude Include="..\include\resource\loader\PropertySymbolQuary.h" />
+    <ClInclude Include="..\include\resource\SFLoadResourceModule.h" />
+    <ClInclude Include="..\include\resource\SFModelResConfig.h" />
+    <ClInclude Include="..\include\resource\SFResourceLoad.h" />
+    <ClInclude Include="..\include\scene\SFGamePresenter.h" />
+    <ClInclude Include="..\include\scene\SFGameScene.h" />
+    <ClInclude Include="..\include\scene\SFGameSceneMgr.h" />
+    <ClInclude Include="..\include\SFSimulator.h" />
+    <ClInclude Include="..\include\stream\BinaryReader.h" />
+    <ClInclude Include="..\include\stream\BinaryReaderNet.h" />
+    <ClInclude Include="..\include\stream\BinaryWriter.h" />
+    <ClInclude Include="..\include\stream\BinaryWriterNet.h" />
+    <ClInclude Include="..\include\stream\iStream.h" />
+    <ClInclude Include="..\include\stream\MemoryStream.h" />
+    <ClInclude Include="..\include\utils\CCStrConv.h" />
+    <ClInclude Include="..\include\utils\CCStrUtil.h" />
+    <ClInclude Include="..\include\utils\CsvFile.h" />
+    <ClInclude Include="..\include\utils\heap.h" />
+    <ClInclude Include="..\include\utils\HttpTools.h" />
+    <ClInclude Include="..\include\utils\SFEasyMail.h" />
+    <ClInclude Include="..\include\utils\SFExecutionThreadService.h" />
+    <ClInclude Include="..\include\utils\SFMiniHtml.h" />
+    <ClInclude Include="..\include\utils\SFPriorityNotificationCenter.h" />
+    <ClInclude Include="..\include\utils\SFStringUtil.h" />
+    <ClInclude Include="..\include\utils\SFThread.h" />
+    <ClInclude Include="..\include\utils\SFTouchDispatcher.h" />
+    <ClInclude Include="..\include\utils\Singleton.h" />
+    <ClInclude Include="..\include\utils\sqlite3.h" />
+    <ClInclude Include="..\include\utils\StreamDataAdapter.h" />
+    <ClInclude Include="..\sofia.h" />
+    <ClInclude Include="..\sofia\download\BackgroundDownloadTask.h" />
+    <ClInclude Include="..\sofia\map\ccShaders.h" />
+    <ClInclude Include="..\sofia\map\ccShader_PositionTextureAlpha_frag.h" />
+    <ClInclude Include="..\sofia\map\ccShader_PositionTextureAlpha_vert.h" />
+    <ClInclude Include="..\sofia\map\ShaderMacro.h" />
+    <ClInclude Include="..\sofia\net\SFSocketCommService.h" />
+    <ClInclude Include="..\sofia\SofiaMacro.h" />
+    <ClInclude Include="..\sofia\utils\CommonUtility.h" />
+    <ClInclude Include="..\sofia\utils\HTTPHandler\Base64Code.h" />
+    <ClInclude Include="..\sofia\utils\md5.h" />
+    <ClInclude Include="..\sofia\utils\MessageFactory.h" />
+    <ClInclude Include="..\sofia\utils\SFLabelTTF.h" />
+    <ClInclude Include="..\sofia\utils\SFArray.h" />
+    <ClInclude Include="..\sofia\utils\SFLog.h" />
+    <ClInclude Include="..\sofia\utils\StateBlock.h" />
+    <ClInclude Include="..\sofia\utils\ThreadScheduler.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{130ED192-9C5D-4739-A5ED-172ABC616BA8}</ProjectGuid>
+    <RootNamespace>Engine.win32</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='editor_release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='editor_debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='editor_release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='editor_debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration).win32\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='editor_debug|Win32'">$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration).win32\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='editor_debug|Win32'">$(Configuration).win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration).win32\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='editor_release|Win32'">$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration).win32\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='editor_release|Win32'">$(Configuration).win32\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='editor_debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='editor_debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='editor_debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='editor_release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='editor_release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='editor_release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\cocos2dx;$(ProjectDir)..\..\cocos2dx\include;$(ProjectDir)..\..\cocos2dx\kazmath\include;$(ProjectDir)..\..\cocos2dx\support;$(ProjectDir)..\..\cocos2dx\platform\win32;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\pthread;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\OGLES;$(ProjectDir)..\;$(ProjectDir)..\include;$(ProjectDir)..\sofia\utils;$(ProjectDir)..\..\external;$(ProjectDir)..\..\external\chipmunk\include\chipmunk;$(ProjectDir)..\..\extensions;$(ProjectDir)..\..\CocosDenshion\include;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\iconv;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\zlib;$(ProjectDir)..\..\third_party\vlc\include;$(ProjectDir)..\..\extensions\CocoStudio\Json;$(ProjectDir)..\..\UIControl\include;$(ProjectDir)..\..\UIControl;$(ProjectDir)..\..\gamelogic\include\platform;$(ProjectDir)..\..\zpack;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_LIB;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <CustomBuildStep>
+      <Inputs>%(Inputs)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='editor_debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\cocos2dx;$(ProjectDir)..\..\cocos2dx\include;$(ProjectDir)..\..\cocos2dx\kazmath\include;$(ProjectDir)..\..\cocos2dx\support;$(ProjectDir)..\..\cocos2dx\platform\win32;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\pthread;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\OGLES;$(ProjectDir)..\;$(ProjectDir)..\include;$(ProjectDir)..\sofia\utils;$(ProjectDir)..\..\engine\include;$(ProjectDir)..\..\external;$(ProjectDir)..\..\external\chipmunk\include\chipmunk;$(ProjectDir)..\..\extensions;$(ProjectDir)..\..\CocosDenshion\include;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\iconv;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\zlib;$(ProjectDir)..\..\third_party\vlc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_LIB;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <CustomBuildStep>
+      <Inputs>%(Inputs)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\cocos2dx;$(ProjectDir)..\..\cocos2dx\include;$(ProjectDir)..\..\cocos2dx\kazmath\include;$(ProjectDir)..\..\cocos2dx\support;$(ProjectDir)..\..\cocos2dx\platform\win32;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\pthread;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\OGLES;$(ProjectDir)..\;$(ProjectDir)..\include;$(ProjectDir)..\sofia\utils;$(ProjectDir)..\..\engine\include;$(ProjectDir)..\..\external;$(ProjectDir)..\..\external\chipmunk\include\chipmunk;$(ProjectDir)..\..\extensions;$(ProjectDir)..\..\CocosDenshion\include;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\iconv;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\zlib;$(ProjectDir)..\..\third_party\vlc\include;$(ProjectDir)..\..\extensions\CocoStudio\Json;$(ProjectDir)..\..\UIControl\include;$(ProjectDir)..\..\UIControl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='editor_release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\cocos2dx;$(ProjectDir)..\..\cocos2dx\include;$(ProjectDir)..\..\cocos2dx\kazmath\include;$(ProjectDir)..\..\cocos2dx\platform\win32;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\pthread;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\OGLES;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\iconv;$(ProjectDir)..\..\cocos2dx\platform\third_party\win32\zlib;$(ProjectDir)..\;$(ProjectDir)..\..\engine\include;$(ProjectDir)..\..\interface\engine;$(ProjectDir)..\..\Extensions;$(ProjectDir)\..\sofia\utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_GAME_EDITOR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

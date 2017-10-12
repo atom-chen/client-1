@@ -1,0 +1,39 @@
+
+class SFBagData :public CCObject
+{
+
+	static SFBagData* create();
+
+	void setNode(CCNode* sprite);
+	void setCount(const char* count);
+	void setNumberType(int numberType);
+	void setShow(bool show);
+	CCNode* getNode();
+	const char* getCount();
+	const int getNumberType();
+	bool isShow();
+
+};
+
+class SFBagGridBox :public SFGridBox
+{
+
+	static SFBagGridBox* create(int columns, CCSize gridSize);
+	static SFBagGridBox* create(int columns, CCSize gridSize,const char* frameName);
+	bool init(int columns, CCSize gridSize,const char* frameName);
+
+	virtual void reloadGridBox();
+	virtual void setLockSprite(CCSpriteFrame* frame);
+	virtual void reloadCellWithIndex(int index);
+	virtual void updateCellNumber(int index,const char* input,int numberType);
+	virtual void updateCellBindedState(int index ,bool show);
+	virtual void setNumberFont(const char* font);
+	virtual void setNumberSize(int size);
+	virtual void setNumberColor(ccColor3B color);
+	virtual void registerWithTouchDispatcher();
+	virtual void setNumberOffset(CCPoint offset);
+
+};
+
+
+

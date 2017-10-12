@@ -1,0 +1,49 @@
+class SFPoint 
+{
+    SFPoint();
+    SFPoint(int x, int y);
+    SFPoint(const SFPoint& other);
+    void setPoint(int x, int y);
+    
+	// for lua
+	int getX();
+	int getY();
+};
+
+class SFSize
+{
+    SFSize();
+    SFSize(int width, int height);
+    SFSize(const SFSize& other);
+    void setSize(int width, int height);
+
+	// for lua
+	int getWidth();
+	int getHeight();
+};
+
+class SFRect 
+{
+    SFRect();
+    SFRect(int x, int y, int width, int height);
+    SFRect(const SFRect& other);
+    void setRect(int x, int y, int width, int height);
+    int getMinX() const; /// return the leftmost x-value of current rect
+    int getMidX() const; /// return the midpoint x-value of current rect
+    int getMaxX() const; /// return the rightmost x-value of current rect
+    int getMinY() const; /// return the bottommost y-value of current rect
+    int getMidY() const; /// return the midpoint y-value of current rect
+    int getMaxY() const; /// return the topmost y-value of current rect
+
+	void setOrigin(int x, int y);
+	void setRect(int width, int height);
+
+	bool containsPoint(int x, int y) const;
+    bool containsPoint(const SFPoint& point) const;
+    bool intersectsRect(const SFRect& rect) const;
+ 
+};
+
+
+
+#endif

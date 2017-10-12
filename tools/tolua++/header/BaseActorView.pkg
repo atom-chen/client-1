@@ -1,0 +1,16 @@
+
+class BaseActorView: public SFActorView
+{
+	static BaseActorView* create(int modelId, int actionType = 1);
+	virtual bool init(int modelId, int actionType = 1);
+	
+	void setModelId(int modelId, int actionType = 1);
+	int getModelId();
+
+	virtual void changeAction(int actionType);
+
+	void setOrientation(int orientation);
+	int getOrientation();
+
+};
+

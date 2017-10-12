@@ -1,0 +1,79 @@
+
+
+enum eMapTouchEvent
+{
+	eMapTouchEventBegin,
+	eMapTouchEventMove,
+	eMapTouchEventEnd
+};
+
+enum eMapRenderDelMode
+{
+	eMapRenderDelMode_NPC,
+	eMapRenderDelMode_Monster,
+	eMapRenderDelMode_Player,
+	eMapRenderDelMode_Effect,
+	eMapRenderDelMode_Normal			
+};
+
+class SFMap : public ISqlReadStreamCallBack
+{
+
+	SFMap();
+	~SFMap();
+
+	static SFPoint coodMap2Cell( int mapx, int mapy );
+	static SFPoint coodCell2Map( int cellx, int celly );
+
+	bool loadMap(int id);
+	bool saveMap(int id);
+	void setDefaultId(int monsterId);
+	bool loadCharacterModel(int modelId,eMapRenderDelMode mode);
+	RenderSprite* enterMap(int modelId, int x, int y,LUA_FUNCTION callbackHander, eRenderLayerTag tag, eMapRenderDelMode mode);
+	bool leaveMap(CCNode* sprite, eMapRenderDelMode mode);
+
+	bool loadMap(SFMapLoadInterface* load);
+	bool enterMapAsyn(CCNode* sprite, LUA_FUNCTION callbackHander, eRenderLayerTag tag = eRenderLayer_Sprite, bool filter = false);
+	bool enterMap(CCNode* sprite, eRenderLayerTag tag= eRenderLayer_Sprite, bool filter = false);
+	bool leaveMap(RenderSprite* sprite);
+	bool leaveMap(CCNode* sprite);
+
+
+	unsigned int getMapWidth() const;
+	unsigned int getMapHeight() const;
+
+
+	void setViewCenter(unsigned int x, unsigned int y);
+	unsigned int getViewCenterX() const;
+	unsigned int getViewCenterY() const;
+
+
+	void setViewBegin(unsigned int x, unsigned int y);
+	unsigned int getViewBeginX() const;
+	unsigned int getViewBeginY() const;
+
+
+	void setViewSize(unsigned int w, unsigned int h);
+	unsigned int getViewSizeW() const;
+	unsigned int getViewSizeH() const;
+
+
+	void setScriptHandler(LUA_FUNCTION nHandler);
+
+	bool IsBlock(int cellx, int celly);
+
+	bool IsHaveBlock(int startX, int startY, int endX, int endY);
+	SFPoint findBlock(int startX, int startY, int endX, int endY);
+
+	void init();
+
+
+	void attach(CCNode* parent);
+	void dettach();
+	
+	bool injectTouchBegin(int sceenX, int sceenY);
+	bool injectTouchEnd(int sceenX, int sceenY);
+	
+	RenderScene* getRenderScene();
+	void OnMapDataLoaded();
+};

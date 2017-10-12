@@ -1,0 +1,17 @@
+
+	class RenderSceneNode : public CCNode
+	{
+		RenderSceneNode();
+		~RenderSceneNode();
+
+		virtual void visit();
+		int getZOrder();
+		
+		virtual void update(float dt, Camera* camer) = 0;
+
+		virtual bool isClip();
+		virtual void setClip(bool clip);
+
+		RenderSceneLayer* getRenderSceneLayer();
+		void setRenderSceneLayer(RenderSceneLayer* layer);
+	};

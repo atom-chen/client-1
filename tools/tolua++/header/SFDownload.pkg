@@ -1,0 +1,44 @@
+
+enum ErrorCode
+{
+	kCreateFile,
+	kNetwork,
+	kNoNewVersion,
+	kUncompress,
+};
+
+class SFDownloadDelegateProtocl : public CCObject
+{
+
+};
+enum DownLoadEvent
+{
+	kOnError,
+	kOnProgress,
+	kOnSuccess,
+	kOnFilesize,
+	kOnAllFilesSize,
+	kOnDownloadSpeed,
+	kOnComplete,
+};
+
+class SFDownLoadDelegateLua : public SFDownloadDelegateProtocl
+{
+	SFDownLoadDelegateLua();
+	virtual ~SFDownLoadDelegateLua();
+	void setHandler(LUA_FUNCTION nHnader);
+};
+
+class SFDownload
+{
+	SFDownload();
+	virtual ~SFDownload();
+	void setDelegate(SFDownloadDelegateProtocl* delegate);
+	void setConnectionTimeout(unsigned int timeout);
+	unsigned int getConnectionTimeout();
+	void setStoragePath(const char* storagePath);
+	const char* getStoragePath();
+	bool addPackageUrl(const char* url, const char* md5);
+	void startDownload();
+	void stopDownLoad();
+};

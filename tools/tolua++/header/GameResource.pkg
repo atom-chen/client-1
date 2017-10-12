@@ -1,0 +1,6 @@
+class GameResource
+{
+	GameResource();
+	~GameResource();
+	static GameResource* instance();
+};

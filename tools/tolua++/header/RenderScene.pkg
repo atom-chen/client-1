@@ -1,0 +1,18 @@
+
+	class RenderScene : public CCNode
+	{
+		RenderScene();
+		~RenderScene();
+
+		virtual void visit();
+		virtual void scheduleUpdate();
+
+		virtual void addChild(CCNode * child, int zOrder, int tag);
+		
+		virtual void update(float dt);
+
+		void load(MemoryStream &msback);
+
+		virtual Map* getMap();
+		void setViewCenter(int x, int y);
+	};

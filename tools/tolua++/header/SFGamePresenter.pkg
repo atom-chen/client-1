@@ -1,0 +1,23 @@
+
+typedef enum
+{
+	GameSimulatorSlaveTag = 1,
+	Current_GameSceneTag
+}SceneChildTag;
+
+class SFGamePresenter : public CCObject
+{
+	SFGamePresenter(void);
+	virtual ~SFGamePresenter(void);
+	
+	virtual bool init();
+	static SFGamePresenter* gamePresenter();
+
+	CCScene* scene();
+	void replaceScene(CCScene* scene);
+	
+	SFGameScene* getCrtScene();
+	SFGameScene* addAndGetScene(string sceneName);
+	void switchTo(SFGameScene *theScene);
+	SFGameScene* switchTo(string sceneContext);
+};

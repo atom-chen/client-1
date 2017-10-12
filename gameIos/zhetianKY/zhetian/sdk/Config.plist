@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>kAppkey</key>
+	<string>e37f701def68a994afac</string>
+	<key>kAppSecret</key>
+	<string>9a792963b16341150bba</string>
+	<key>kAppChannel</key>
+	<string>CURRENT00000</string>
+	<key>kSettingVersion</key>
+	<string>v1.0_s1.0.0</string>
+	<key>kPlatformAppid</key>
+	<string>5163</string>
+	<key>kPlatformMd5key</key>
+	<string>XDPYUdVEVnSH3HVBbkKdytkHASxe6x23</string>
+</dict>
+</plist>

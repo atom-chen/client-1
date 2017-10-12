@@ -1,0 +1,10 @@
+
+class SFScriptManager
+{
+public:
+	static SFScriptManager* shareScriptManager();
+	int excuteZpkLua(const char* name);
+	void setZpkSupport(bool bSupport);
+	bool isSearchZpk();
+};
+

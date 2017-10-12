@@ -1,0 +1,81 @@
+
+enum 
+{
+    CCControlEventTouchDown           = 1 << 0,    // A touch-down event in the control.
+    CCControlEventTouchDragInside     = 1 << 1,    // An event where a finger is dragged inside the bounds of the control.
+    CCControlEventTouchDragOutside    = 1 << 2,    // An event where a finger is dragged just outside the bounds of the control. 
+    CCControlEventTouchDragEnter      = 1 << 3,    // An event where a finger is dragged into the bounds of the control.
+    CCControlEventTouchDragExit       = 1 << 4,    // An event where a finger is dragged from within a control to outside its bounds.
+    CCControlEventTouchUpInside       = 1 << 5,    // A touch-up event in the control where the finger is inside the bounds of the control. 
+    CCControlEventTouchUpOutside      = 1 << 6,    // A touch-up event in the control where the finger is outside the bounds of the control.
+    CCControlEventTouchCancel         = 1 << 7,    // A system event canceling the current touches for the control.
+    CCControlEventValueChanged        = 1 << 8      // A touch dragging or otherwise manipulating a control, causing it to emit a series of different values.
+};
+typedef unsigned int CCControlEvent;
+
+
+enum 
+{
+    CCControlStateNormal       = 1 << 0, // The normal, or default state of a control¡ªthat is, enabled but neither selected nor highlighted.
+    CCControlStateHighlighted  = 1 << 1, // Highlighted state of a control. A control enters this state when a touch down, drag inside or drag enter is performed. You can retrieve and set this value through the highlighted property.
+    CCControlStateDisabled     = 1 << 2, // Disabled state of a control. This state indicates that the control is currently disabled. You can retrieve and set this value through the enabled property.
+    CCControlStateSelected     = 1 << 3  // Selected state of a control. This state indicates that the control is currently selected. You can retrieve and set this value through the selected property.
+};
+typedef unsigned int CCControlState;
+
+
+class CCControl : public CCLayerRGBA
+{
+
+
+    
+ virtual CCControlState getState(void) const { return m_eState; }
+
+
+
+
+    virtual void setEnabled(bool bEnabled);
+    virtual bool isEnabled();
+
+    virtual void setSelected(bool bSelected);
+    virtual bool isSelected();
+
+    virtual void setHighlighted(bool bHighlighted);
+    virtual bool isHighlighted();
+    bool hasVisibleParents();
+
+    virtual void needsLayout();
+    
+    virtual bool isOpacityModifyRGB();
+    virtual void setOpacityModifyRGB(bool bOpacityModifyRGB);
+
+
+
+
+    CCControl();
+    virtual bool init(void);
+    virtual ~CCControl();
+
+
+    virtual void onEnter();
+    virtual void onExit();
+    virtual void registerWithTouchDispatcher();
+
+    virtual void sendActionsForControlEvents(CCControlEvent controlEvents);
+
+
+    virtual void addTargetWithActionForControlEvents(CCObject* target, SEL_CCControlHandler action, CCControlEvent controlEvents);
+    
+    void addTargetWithActionForControlEvents(LUA_FUNCTION nHandler, CCControlEvent controlEvents);
+
+    virtual void removeTargetWithActionForControlEvents(CCObject* target, SEL_CCControlHandler action, CCControlEvent controlEvents);
+
+
+    virtual CCPoint getTouchLocation(CCTouch* touch);
+
+    virtual bool isTouchInside(CCTouch * touch);
+
+
+    void setTouchAreaDelta(float deltaLeft = 0.0f, float deltaRight = 0.0f, float deltaTop = 0.0f, float deltaButtom = 0.0f);
+	void setTouchAreaScale(float scale = 0.0f);
+};

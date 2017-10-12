@@ -1,0 +1,21 @@
+
+class SFTimeAxis
+{
+
+	SFTimeAxis();
+	~SFTimeAxis();
+	static SFTimeAxis*  Instance();
+
+	int getDelayTime();
+
+	long long getClientTime();
+		
+	void advance(int delay);
+
+	void			setRequSyneClientTime();
+	long long		getCrtServerTime();
+	void			setCrtServerTime(long long serverTime);
+
+	long long getBackgroundPauseTime();
+
+}

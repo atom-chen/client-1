@@ -1,0 +1,19 @@
+
+class SFRenderSprite : public CCNode
+{
+	static SFRenderSprite* createRenderSprite(unsigned int modelId, unsigned int defaultId = 0);
+	bool init(unsigned int modelId);
+	//void			changeModelAction(int actionId, float speed, float alpha);
+	void			changeModel(unsigned int modelId, bool gender = false);
+	void			changeModelPart(int partId, unsigned int modelId, bool visible = true);
+	void			changeModelPart(int partId, unsigned int modelId, const CCPoint &position, bool visible = true, bool gender = false);
+	void			setScriptHandler(LUA_FUNCTION scriptHander);
+	void			setAnimationSpeed(float speed);
+	unsigned	int getModelId(){return m_modelId;}
+	virtual const CCSize& getContentSize();
+	static SFRenderSprite* createRenderSprite(unsigned int modelId, int actionId, const char* path);
+	bool init(unsigned int modelId, int actionId, const char* path);
+	bool			playByIndexLua(int index);
+	bool			playByDirLua(int dir);
+	void	 		setOpacity(unsigned char opacity);
+};

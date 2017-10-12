@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>outputFormat</key>
+	<string>out-public</string>
+	<key>version</key>
+	<string>0.0.2.32</string>
+	<key>build_list</key>
+	<dict>
+		<key>9133</key>
+		<string></string>
+		<key>9133-base</key>
+		<string></string>
+		<key>downjoy</key>
+		<string></string>
+		<key>downjoy-base</key>
+		<string></string>
+		<key>ky</key>
+		<string></string>
+		<key>ky-base</key>
+		<string></string>
+		<key>ledou</key>
+		<string></string>
+		<key>ledou-base</key>
+		<string></string>
+		<key>pp</key>
+		<string></string>
+		<key>pp-base</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

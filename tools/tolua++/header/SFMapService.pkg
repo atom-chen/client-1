@@ -1,0 +1,14 @@
+
+class SFMapService
+{
+	SFMapService();
+	~SFMapService();
+
+	void startUp(const char* config);
+	void shutDown();
+
+	SFMap* getShareMap();
+	//SFMapResourceSlave* getMapResouceSlave();
+	void setScriptHandler(LUA_FUNCTION scriptHander);
+	static SFMapService* instance();
+};

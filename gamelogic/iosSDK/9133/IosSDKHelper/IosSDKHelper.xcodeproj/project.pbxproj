@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		091B52FE19246478007EF0AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091B52FD19246478007EF0AB /* Foundation.framework */; };
+		091B530519246479007EF0AB /* IosSDKHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 091B530419246479007EF0AB /* IosSDKHelper.mm */; };
+		091B530C19246479007EF0AB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091B530B19246479007EF0AB /* XCTest.framework */; };
+		091B530D19246479007EF0AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091B52FD19246478007EF0AB /* Foundation.framework */; };
+		091B530F19246479007EF0AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091B530E19246479007EF0AB /* UIKit.framework */; };
+		091B531219246479007EF0AB /* libIosSDKHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 091B52FA19246478007EF0AB /* libIosSDKHelper.a */; };
+		091B531819246479007EF0AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 091B531619246479007EF0AB /* InfoPlist.strings */; };
+		091B531A19246479007EF0AB /* IosSDKHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 091B531919246479007EF0AB /* IosSDKHelperTests.m */; };
+		091B533519249C12007EF0AB /* youaiSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 091B533219249C12007EF0AB /* youaiSDK.a */; };
+		09BA26E619710BDE008E562B /* SFGameAnalyzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09BA26E319710BDE008E562B /* SFGameAnalyzer.cpp */; };
+		09BA26E719710BDE008E562B /* SFGameHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09BA26E419710BDE008E562B /* SFGameHelper.mm */; };
+		09BA26E819710BDE008E562B /* SFLoginManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09BA26E519710BDE008E562B /* SFLoginManager.mm */; };
+		09BA26ED19710C3F008E562B /* LDGAMEAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BA26EA19710C3F008E562B /* LDGAMEAdapter.m */; };
+		09BA26EE19710C3F008E562B /* MainSDKHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 09BA26EC19710C3F008E562B /* MainSDKHelper.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		091B531019246479007EF0AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 091B52F219246478007EF0AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 091B52F919246478007EF0AB;
+			remoteInfo = IosSDKHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		091B52F819246478007EF0AB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		091B52FA19246478007EF0AB /* libIosSDKHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIosSDKHelper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		091B52FD19246478007EF0AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		091B530119246479007EF0AB /* IosSDKHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IosSDKHelper-Prefix.pch"; sourceTree = "<group>"; };
+		091B530419246479007EF0AB /* IosSDKHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IosSDKHelper.mm; sourceTree = "<group>"; };
+		091B530A19246479007EF0AB /* IosSDKHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosSDKHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		091B530B19246479007EF0AB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		091B530E19246479007EF0AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		091B531519246479007EF0AB /* IosSDKHelperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IosSDKHelperTests-Info.plist"; sourceTree = "<group>"; };
+		091B531719246479007EF0AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		091B531919246479007EF0AB /* IosSDKHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IosSDKHelperTests.m; sourceTree = "<group>"; };
+		091B532F19249C12007EF0AB /* YouaiGetWifiMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouaiGetWifiMac.h; sourceTree = "<group>"; };
+		091B533019249C12007EF0AB /* YouaiLoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouaiLoginInfo.h; sourceTree = "<group>"; };
+		091B533119249C12007EF0AB /* YouaiNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouaiNotifications.h; sourceTree = "<group>"; };
+		091B533219249C12007EF0AB /* youaiSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = youaiSDK.a; sourceTree = "<group>"; };
+		091B533319249C12007EF0AB /* YouaiSDKMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouaiSDKMgr.h; sourceTree = "<group>"; };
+		091B533419249C12007EF0AB /* YouaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouaiViewController.h; sourceTree = "<group>"; };
+		091B53371924A2EF007EF0AB /* IosSDKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IosSDKHelper.h; path = ../../../IosSDKHelper.h; sourceTree = "<group>"; };
+		09BA26DF19710BBF008E562B /* SFGameAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFGameAnalyzer.h; sourceTree = "<group>"; };
+		09BA26E019710BBF008E562B /* SFGameHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFGameHelper.h; sourceTree = "<group>"; };
+		09BA26E119710BBF008E562B /* SFLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoginManager.h; sourceTree = "<group>"; };
+		09BA26E319710BDE008E562B /* SFGameAnalyzer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SFGameAnalyzer.cpp; sourceTree = "<group>"; };
+		09BA26E419710BDE008E562B /* SFGameHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SFGameHelper.mm; sourceTree = "<group>"; };
+		09BA26E519710BDE008E562B /* SFLoginManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SFLoginManager.mm; sourceTree = "<group>"; };
+		09BA26E919710C3F008E562B /* LDGAMEAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LDGAMEAdapter.h; path = ../../../LDGAMEAdapter.h; sourceTree = "<group>"; };
+		09BA26EA19710C3F008E562B /* LDGAMEAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LDGAMEAdapter.m; path = ../../../LDGAMEAdapter.m; sourceTree = "<group>"; };
+		09BA26EB19710C3F008E562B /* MainSDKHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainSDKHelper.h; path = ../../../MainSDKHelper.h; sourceTree = "<group>"; };
+		09BA26EC19710C3F008E562B /* MainSDKHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MainSDKHelper.mm; path = ../../../MainSDKHelper.mm; sourceTree = "<group>"; };
+		09BA26F019710DDC008E562B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		091B52F719246478007EF0AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091B533519249C12007EF0AB /* youaiSDK.a in Frameworks */,
+				091B52FE19246478007EF0AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091B530719246479007EF0AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091B531219246479007EF0AB /* libIosSDKHelper.a in Frameworks */,
+				091B530C19246479007EF0AB /* XCTest.framework in Frameworks */,
+				091B530F19246479007EF0AB /* UIKit.framework in Frameworks */,
+				091B530D19246479007EF0AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		091B52F119246478007EF0AB = {
+			isa = PBXGroup;
+			children = (
+				09BA26EF19710DDC008E562B /* third_part */,
+				09BA26DA19710BA0008E562B /* gameLogic */,
+				091B52FF19246478007EF0AB /* IosSDKHelper */,
+				091B531319246479007EF0AB /* IosSDKHelperTests */,
+				091B52FC19246478007EF0AB /* Frameworks */,
+				091B52FB19246478007EF0AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		091B52FB19246478007EF0AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				091B52FA19246478007EF0AB /* libIosSDKHelper.a */,
+				091B530A19246479007EF0AB /* IosSDKHelperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		091B52FC19246478007EF0AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				091B52FD19246478007EF0AB /* Foundation.framework */,
+				091B530B19246479007EF0AB /* XCTest.framework */,
+				091B530E19246479007EF0AB /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		091B52FF19246478007EF0AB /* IosSDKHelper */ = {
+			isa = PBXGroup;
+			children = (
+				091B53371924A2EF007EF0AB /* IosSDKHelper.h */,
+				09BA26E919710C3F008E562B /* LDGAMEAdapter.h */,
+				09BA26EA19710C3F008E562B /* LDGAMEAdapter.m */,
+				09BA26EB19710C3F008E562B /* MainSDKHelper.h */,
+				09BA26EC19710C3F008E562B /* MainSDKHelper.mm */,
+				091B532519246701007EF0AB /* sdk */,
+				091B530419246479007EF0AB /* IosSDKHelper.mm */,
+				091B530019246479007EF0AB /* Supporting Files */,
+			);
+			path = IosSDKHelper;
+			sourceTree = "<group>";
+		};
+		091B530019246479007EF0AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				091B530119246479007EF0AB /* IosSDKHelper-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		091B531319246479007EF0AB /* IosSDKHelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				091B531919246479007EF0AB /* IosSDKHelperTests.m */,
+				091B531419246479007EF0AB /* Supporting Files */,
+			);
+			path = IosSDKHelperTests;
+			sourceTree = "<group>";
+		};
+		091B531419246479007EF0AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				091B531519246479007EF0AB /* IosSDKHelperTests-Info.plist */,
+				091B531619246479007EF0AB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		091B532519246701007EF0AB /* sdk */ = {
+			isa = PBXGroup;
+			children = (
+				091B532F19249C12007EF0AB /* YouaiGetWifiMac.h */,
+				091B533019249C12007EF0AB /* YouaiLoginInfo.h */,
+				091B533119249C12007EF0AB /* YouaiNotifications.h */,
+				091B533219249C12007EF0AB /* youaiSDK.a */,
+				091B533319249C12007EF0AB /* YouaiSDKMgr.h */,
+				091B533419249C12007EF0AB /* YouaiViewController.h */,
+			);
+			name = sdk;
+			path = ../../sdk;
+			sourceTree = "<group>";
+		};
+		09BA26DA19710BA0008E562B /* gameLogic */ = {
+			isa = PBXGroup;
+			children = (
+				09BA26E219710BDE008E562B /* ios */,
+				09BA26DB19710BBF008E562B /* include */,
+			);
+			name = gameLogic;
+			sourceTree = "<group>";
+		};
+		09BA26DB19710BBF008E562B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				09BA26DC19710BBF008E562B /* platform */,
+			);
+			name = include;
+			path = ../../../include;
+			sourceTree = "<group>";
+		};
+		09BA26DC19710BBF008E562B /* platform */ = {
+			isa = PBXGroup;
+			children = (
+				09BA26DF19710BBF008E562B /* SFGameAnalyzer.h */,
+				09BA26E019710BBF008E562B /* SFGameHelper.h */,
+				09BA26E119710BBF008E562B /* SFLoginManager.h */,
+			);
+			path = platform;
+			sourceTree = "<group>";
+		};
+		09BA26E219710BDE008E562B /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				09BA26E319710BDE008E562B /* SFGameAnalyzer.cpp */,
+				09BA26E419710BDE008E562B /* SFGameHelper.mm */,
+				09BA26E519710BDE008E562B /* SFLoginManager.mm */,
+			);
+			name = ios;
+			path = ../../../sofia/platform/ios;
+			sourceTree = "<group>";
+		};
+		09BA26EF19710DDC008E562B /* third_part */ = {
+			isa = PBXGroup;
+			children = (
+				09BA26F019710DDC008E562B /* Reachability.h */,
+			);
+			name = third_part;
+			path = ../../../third_part;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		091B52F919246478007EF0AB /* IosSDKHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 091B531D19246479007EF0AB /* Build configuration list for PBXNativeTarget "IosSDKHelper" */;
+			buildPhases = (
+				091B52F619246478007EF0AB /* Sources */,
+				091B52F719246478007EF0AB /* Frameworks */,
+				091B52F819246478007EF0AB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IosSDKHelper;
+			productName = IosSDKHelper;
+			productReference = 091B52FA19246478007EF0AB /* libIosSDKHelper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		091B530919246479007EF0AB /* IosSDKHelperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 091B532019246479007EF0AB /* Build configuration list for PBXNativeTarget "IosSDKHelperTests" */;
+			buildPhases = (
+				091B530619246479007EF0AB /* Sources */,
+				091B530719246479007EF0AB /* Frameworks */,
+				091B530819246479007EF0AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				091B531119246479007EF0AB /* PBXTargetDependency */,
+			);
+			name = IosSDKHelperTests;
+			productName = IosSDKHelperTests;
+			productReference = 091B530A19246479007EF0AB /* IosSDKHelperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		091B52F219246478007EF0AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = youai;
+			};
+			buildConfigurationList = 091B52F519246478007EF0AB /* Build configuration list for PBXProject "IosSDKHelper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 091B52F119246478007EF0AB;
+			productRefGroup = 091B52FB19246478007EF0AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				091B52F919246478007EF0AB /* IosSDKHelper */,
+				091B530919246479007EF0AB /* IosSDKHelperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		091B530819246479007EF0AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091B531819246479007EF0AB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		091B52F619246478007EF0AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09BA26E619710BDE008E562B /* SFGameAnalyzer.cpp in Sources */,
+				091B530519246479007EF0AB /* IosSDKHelper.mm in Sources */,
+				09BA26ED19710C3F008E562B /* LDGAMEAdapter.m in Sources */,
+				09BA26EE19710C3F008E562B /* MainSDKHelper.mm in Sources */,
+				09BA26E819710BDE008E562B /* SFLoginManager.mm in Sources */,
+				09BA26E719710BDE008E562B /* SFGameHelper.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091B530619246479007EF0AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091B531A19246479007EF0AB /* IosSDKHelperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		091B531119246479007EF0AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 091B52F919246478007EF0AB /* IosSDKHelper */;
+			targetProxy = 091B531019246479007EF0AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		091B531619246479007EF0AB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				091B531719246479007EF0AB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		091B531B19246479007EF0AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		091B531C19246479007EF0AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		091B531E19246479007EF0AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/IosSDKHelper.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IosSDKHelper/IosSDKHelper-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"COCOS2D_DEBUG=1",
+					CC_TARGET_OS_IPHONE,
+					"CC_LUA_ENGINE_ENABLED=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"../../../include/platform\"",
+					"\"../../../../cocos2dx/include\"",
+					"\"../../../../cocos2dx/kazmath/include\"",
+					"\"../../../../cocos2dx/platform/ios\"",
+					"\"../../../../cocos2dx/platform/third_party/ios\"",
+					"\"../../../../cocos2dx/platform\"",
+					"\"../../../../cocos2dx\"",
+					../sdk,
+					"\"../../../../gamelogic\"",
+					"\"../../../../framework/include\"",
+					"\"../../../../framework\"",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYMROOT = ../../build/9133;
+			};
+			name = Debug;
+		};
+		091B531F19246479007EF0AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/IosSDKHelper.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IosSDKHelper/IosSDKHelper-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					CC_TARGET_OS_IPHONE,
+					"CC_LUA_ENGINE_ENABLED=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"../../../include/platform\"",
+					"\"../../../../cocos2dx/include\"",
+					"\"../../../../cocos2dx/kazmath/include\"",
+					"\"../../../../cocos2dx/platform/ios\"",
+					"\"../../../../cocos2dx/platform/third_party/ios\"",
+					"\"../../../../cocos2dx/platform\"",
+					"\"../../../../cocos2dx\"",
+					../sdk,
+					"\"../../../../gamelogic\"",
+					"\"../../../../framework/include\"",
+					"\"../../../../framework\"",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SYMROOT = ../../build/9133;
+			};
+			name = Release;
+		};
+		091B532119246479007EF0AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IosSDKHelper/IosSDKHelper-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "IosSDKHelperTests/IosSDKHelperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		091B532219246479007EF0AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IosSDKHelper/IosSDKHelper-Prefix.pch";
+				INFOPLIST_FILE = "IosSDKHelperTests/IosSDKHelperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		091B52F519246478007EF0AB /* Build configuration list for PBXProject "IosSDKHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091B531B19246479007EF0AB /* Debug */,
+				091B531C19246479007EF0AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		091B531D19246479007EF0AB /* Build configuration list for PBXNativeTarget "IosSDKHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091B531E19246479007EF0AB /* Debug */,
+				091B531F19246479007EF0AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		091B532019246479007EF0AB /* Build configuration list for PBXNativeTarget "IosSDKHelperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091B532119246479007EF0AB /* Debug */,
+				091B532219246479007EF0AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 091B52F219246478007EF0AB /* Project object */;
+}

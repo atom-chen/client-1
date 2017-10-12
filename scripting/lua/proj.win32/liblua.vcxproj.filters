@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tolua">
+      <UniqueIdentifier>{243d29bc-c49a-4d05-8e2f-2c2f5858928a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cocos2dx_support">
+      <UniqueIdentifier>{bbe428ed-e8e5-4e3c-80c9-0e586814b884}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="luajit">
+      <UniqueIdentifier>{948e219e-763e-41d0-bc8d-6421dba8ad70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="luajit\include">
+      <UniqueIdentifier>{606f45ad-6541-404f-b6b6-a74e3d000fb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lua">
+      <UniqueIdentifier>{f0ac044b-7678-41ea-a8d5-699935c637f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lua\cjson">
+      <UniqueIdentifier>{f4055cb6-7e91-4f95-9c6d-e3158e0f1aaf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\tolua\tolua_event.c">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tolua\tolua_is.c">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tolua\tolua_map.c">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tolua\tolua_push.c">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tolua\tolua_to.c">
+      <Filter>tolua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2dx_support\CCLuaEngine.cpp">
+      <Filter>cocos2dx_support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2dx_support\Cocos2dxLuaLoader.cpp">
+      <Filter>cocos2dx_support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2dx_support\LuaCocos2d.cpp">
+      <Filter>cocos2dx_support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2dx_support\tolua_fix.c">
+      <Filter>cocos2dx_support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2dx_support\CCLuaBridge.cpp">
+      <Filter>cocos2dx_support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2dx_support\CCLuaStack.cpp">
+      <Filter>cocos2dx_support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2dx_support\CCLuaValue.cpp">
+      <Filter>cocos2dx_support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2dx_support\Lua_web_socket.cpp">
+      <Filter>cocos2dx_support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2dx_support\LuaFramework.cpp">
+      <Filter>cocos2dx_support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2dx_support\SFScriptManager.cpp">
+      <Filter>cocos2dx_support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lua\cjson\fpconv.c">
+      <Filter>lua\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lua\cjson\lua_cjson.c">
+      <Filter>lua\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lua\cjson\lua_extensions.c">
+      <Filter>lua\cjson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lua\cjson\strbuf.c">
+      <Filter>lua\cjson</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\tolua\tolua++.h">
+      <Filter>tolua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tolua\tolua_event.h">
+      <Filter>tolua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2dx_support\CCLuaEngine.h">
+      <Filter>cocos2dx_support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2dx_support\Cocos2dxLuaLoader.h">
+      <Filter>cocos2dx_support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2dx_support\LuaCocos2d.h">
+      <Filter>cocos2dx_support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2dx_support\tolua_fix.h">
+      <Filter>cocos2dx_support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2dx_support\CCLuaBridge.h">
+      <Filter>cocos2dx_support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2dx_support\CCLuaStack.h">
+      <Filter>cocos2dx_support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2dx_support\CCLuaValue.h">
+      <Filter>cocos2dx_support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2dx_support\Lua_web_socket.h">
+      <Filter>cocos2dx_support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2dx_support\LuaFramework.h">
+      <Filter>cocos2dx_support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2dx_support\SFScriptManager.h">
+      <Filter>cocos2dx_support</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luajit\include\lauxlib.h">
+      <Filter>luajit\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luajit\include\lua.h">
+      <Filter>luajit\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luajit\include\luaconf.h">
+      <Filter>luajit\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luajit\include\lualib.h">
+      <Filter>luajit\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lua\cjson\fpconv.h">
+      <Filter>lua\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lua\cjson\lua_cjson.h">
+      <Filter>lua\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lua\cjson\lua_extensions.h">
+      <Filter>lua\cjson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lua\cjson\strbuf.h">
+      <Filter>lua\cjson</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

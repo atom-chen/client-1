@@ -1,0 +1,5 @@
+
+class CCTexture2D : public CCObject
+{
+    unsigned int getName();
+};

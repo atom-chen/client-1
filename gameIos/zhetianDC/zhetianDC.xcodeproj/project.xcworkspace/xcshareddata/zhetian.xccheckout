@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>511A07E3-3669-46D4-816A-480242265C40</string>
+	<key>IDESourceControlProjectName</key>
+	<string>zhetian</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C0BA8F3D-8711-43E6-9DF6-35FF4F34400E</key>
+		<string>svn://10.21.210.164/Sophia/client/trunk/gamelogic</string>
+		<key>D4276DEE-E0C2-4F67-A2B7-3BBE4D227939</key>
+		<string>svn://10.21.210.164/MorningGlory/client/branch/0.4.0</string>
+		<key>F1EB9C62-337F-4DB5-9E08-663B63D93AFB</key>
+		<string>svn://10.21.210.164/MorningGlory/client/trunk</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C0BA8F3D-8711-43E6-9DF6-35FF4F34400E</key>
+		<string>../../../../../client (trunk)/gamelogic/gamelogic</string>
+		<key>D4276DEE-E0C2-4F67-A2B7-3BBE4D227939</key>
+		<string>../../../../../0.4.0</string>
+		<key>F1EB9C62-337F-4DB5-9E08-663B63D93AFB</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>C0BA8F3D-8711-43E6-9DF6-35FF4F34400E</key>
+		<string>svn://10.21.210.164/Sophia</string>
+		<key>D4276DEE-E0C2-4F67-A2B7-3BBE4D227939</key>
+		<string>svn://10.21.210.164/MorningGlory</string>
+		<key>F1EB9C62-337F-4DB5-9E08-663B63D93AFB</key>
+		<string>svn://10.21.210.164/MorningGlory</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>file:///Users/youai/Documents/client%20(trunk)/gameIos/zhetianUC/zhetian.xcodeproj/project.xcworkspace/</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F1EB9C62-337F-4DB5-9E08-663B63D93AFB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D4276DEE-E0C2-4F67-A2B7-3BBE4D227939</string>
+			<key>IDESourceControlWCCName</key>
+			<string>0.4.0</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>client/trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F1EB9C62-337F-4DB5-9E08-663B63D93AFB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>client (trunk)</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C0BA8F3D-8711-43E6-9DF6-35FF4F34400E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>gamelogic</string>
+		</dict>
+	</array>
+</dict>
+</plist>

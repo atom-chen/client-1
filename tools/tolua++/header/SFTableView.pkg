@@ -1,0 +1,107 @@
+
+typedef enum {
+    kSFTableViewFillTopDown,
+    kSFTableViewFillBottomUp
+} SFTableViewVerticalFillOrder;
+
+
+class SFTableViewDelegate : public CCScrollViewDelegate
+{
+
+
+	virtual void tableCellTouched(SFTableView* table, SFTableViewCell* cell);
+	virtual void tableCellTouched(SFTableView* table, SFTableViewCell* cell, CCPoint pt);
+
+    virtual void tableCellHighlight(SFTableView* table, SFTableViewCell* cell);
+
+    virtual void tableCellUnhighlight(SFTableView* table, SFTableViewCell* cell);
+
+
+    virtual void tableCellWillRecycle(SFTableView* table, SFTableViewCell* cell);
+	virtual void scrollViewDidScroll(CCScrollView* view);
+	virtual void scrollViewDidZoom(CCScrollView* view);
+};
+
+class SFTableData :public CCObject
+{
+
+	static SFTableData* create();
+	void setIndex(int index);
+	void setSize(CCSize size);
+	void setCell(SFTableViewCell* cell);
+};
+
+
+class SFTableViewDataSource
+{
+
+    virtual ~SFTableViewDataSource();
+
+
+    virtual CCSize tableCellSizeForIndex(SFTableView *table, unsigned int idx);
+
+    virtual CCSize cellSizeForTable(SFTableView *table);
+    virtual SFTableViewCell* tableCellAtIndex(SFTableView *table, unsigned int idx) = 0;
+    virtual unsigned int numberOfCellsInTableView(SFTableView *table) = 0;
+
+};
+
+
+class SFTableView : public CCScrollView, public CCScrollViewDelegate
+{
+
+	SFTableView();
+	virtual ~SFTableView();
+
+    static SFTableView* create(SFTableViewDataSource* dataSource, CCSize size);
+
+    static SFTableView* create(SFTableViewDataSource* dataSource, CCSize size, CCNode *container);
+
+    SFTableViewDataSource* getDataSource() ;
+    void setDataSource(SFTableViewDataSource* source) ;
+		void setDataHandler(LUA_FUNCTION nHandler);
+		void setTableViewHandler(LUA_FUNCTION nHander);
+    SFTableViewDelegate* getDelegate() ;
+    void setDelegate(SFTableViewDelegate* pDelegate) ;
+
+    void setVerticalFillOrder(SFTableViewVerticalFillOrder order);
+    SFTableViewVerticalFillOrder getVerticalFillOrder();
+
+
+    bool initWithViewSize(CCSize size, CCNode* container = NULL);
+
+    void updateCellAtIndex(unsigned int idx);
+
+    void insertCellAtIndex(unsigned int idx);
+
+    void removeCellAtIndex(unsigned int idx);
+
+    void reloadData();
+
+
+
+	SFTableViewCell *dequeueCell(int index);
+
+
+    SFTableViewCell *cellAtIndex(unsigned int idx);
+
+	void scroll2Cell(unsigned int idx, bool animated = true);
+
+
+    virtual void scrollViewDidScroll(CCScrollView* view);
+    virtual void scrollViewDidZoom(CCScrollView* view);
+
+    virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
+    virtual void ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent);
+    virtual void ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent);
+    virtual void ccTouchCancelled(CCTouch *pTouch, CCEvent *pEvent);
+	virtual void registerWithTouchDispatcher();
+
+ virtual int getSelectedCellIndex(void) const { return m_selectedIndex; }
+ virtual void setSelectedCellIndex(int var){ m_selectedIndex = var; }
+
+
+    void _updateContentSize();
+
+};
+

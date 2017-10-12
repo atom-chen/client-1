@@ -1,0 +1,31 @@
+
+class SFTouchProtocol{
+
+	virtual void singleTouch(CCPoint touchPosition);
+	virtual void doubleTouch(CCPoint touchPosition);
+	virtual void longTouch(CCPoint touchPosition);
+};
+
+class SFTouchLayer: public SFBaseControl, public SFTouchProtocol{
+
+
+	SFTouchLayer();
+	virtual ~SFTouchLayer();
+
+	static SFTouchLayer* create();
+	virtual bool init();
+	virtual void onExit();
+
+	virtual void setSwallow(bool swallow);
+
+	virtual void catchScreen(bool isCatch);
+
+	void setExpandAction(bool bExpand);
+
+	virtual void passHandle(CCTouchDelegate *touchHandle, int distance=10);
+
+
+};
+
+
+
